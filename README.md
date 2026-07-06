@@ -2,7 +2,8 @@
 
 https://github.com/Aiden-Kwak/IBM-DOCS-MCP
 위의 레파지토리 포크해서 개인적으로 필요한 IBM 제품 Document 추가합니다.
-- IBM DataPower Interact Gateway
+- IBM DataPower Interact Gateway 12.1.1
+- IBM API Connect for GraphQL Software 1.1.x
 
 > **Unofficial** - IBM과 공식적으로 관련 없는 커뮤니티 프로젝트입니다.
 
@@ -15,7 +16,8 @@ IBM Bob, Claude Code, Claude Desktop 등 MCP를 지원하는 AI 클라이언트�
 | Server | Product | Docs | Tools |
 |--------|---------|------|-------|
 | [apic-docs-mcp](./apic-docs-mcp) | IBM API Connect 12.1.1 | 1,000+ | `search_apic_docs`, `read_apic_doc`, `get_apic_toc` |
-| [idig-docs-mcp](./idig-docs-mcp) | IBM DataPower Interact Gateway 12.1.1 | 1,000+ | `search_idig_docs`, `read_idig_doc`, `get_idig_toc` |
+| [idig-docs-mcp](./idig-docs-mcp) | IBM DataPower Interact Gateway 12.1.1 | ??? | `search_idig_docs`, `read_idig_doc`, `get_idig_toc` |
+| [graphql-docs-mcp](./graphql-docs-mcp) | IBM API Connect for GraphQL Software 1.1.x | ??? | `search_graphql_docs`, `read_graphql_doc`, `get_graphql_toc` |
 | [iwhi-docs-mcp](./iwhi-docs-mcp) | IBM Hybrid Integration Library | 700+ | `search_iwhi_docs`, `read_iwhi_doc`, `get_iwhi_toc` |
 | [instana-docs-mcp](./instana-docs-mcp) | IBM Instana Observability | 760+ | `search_instana_docs`, `read_instana_doc`, `get_instana_toc` |
 | [concert-docs-mcp](./concert-docs-mcp) | IBM Concert 2.3.x | 290+ | `search_concert_docs`, `read_concert_doc`, `get_concert_toc` |
@@ -29,7 +31,7 @@ IBM Bob, Claude Code, Claude Desktop 등 MCP를 지원하는 AI 클라이언트�
 
 ```bash
 # 원하는 서버 디렉토리로 이동
-cd apic-docs-mcp  # 또는 idig-docs-mcp, iwhi-docs-mcp, instana-docs-mcp, concert-docs-mcp
+cd apic-docs-mcp  # 또는 idig-docs-mcp, graphql-docs-mcp, iwhi-docs-mcp, instana-docs-mcp, concert-docs-mcp
 
 # 설치 및 빌드
 npm install
