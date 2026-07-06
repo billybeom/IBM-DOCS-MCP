@@ -1,6 +1,7 @@
 # ibm-docs-mcp
 
-아래의 레파지토리를 포크해서 개인적으로 필요한 IBM 제품 Document 추가합니다.
+https://github.com/Aiden-Kwak/IBM-DOCS-MCP
+위의 레파지토리 포크해서 개인적으로 필요한 IBM 제품 Document 추가합니다.
 - IBM DataPower Interact Gateway
 
 > **Unofficial** - IBM과 공식적으로 관련 없는 커뮤니티 프로젝트입니다.
