@@ -106,14 +106,31 @@ server.tool(
 
       if (product) {
         const lower = product.toLowerCase();
-        const narrowed = results.filter(
-          (r) =>
-            r.label.toLowerCase().includes(lower) ||
-            r.key.toLowerCase().includes(lower)
+        // 정확 매칭 우선. "API Connect"가 "API Connect for GraphQL"까지
+        // 끌고 오지 않도록, 부분 문자열 매칭은 정확히 걸리는 게 없을 때만 쓴다.
+        const exact = results.filter(
+          (r) => r.key.toLowerCase() === lower || r.label.toLowerCase() === lower
         );
-        if (narrowed.length > 0) {
-          results = narrowed;
+        const matched =
+          exact.length > 0
+            ? exact
+            : results.filter(
+                (r) =>
+                  r.label.toLowerCase().includes(lower) ||
+                  r.key.toLowerCase().includes(lower)
+              );
+        if (matched.length === 0) {
+          const available = results.map((r) => `${r.label} (${r.key})`).join(", ");
+          return {
+            content: [
+              {
+                type: "text" as const,
+                text: `No component product matching "${product}" was found. Available: ${available}.`,
+              },
+            ],
+          };
         }
+        results = matched;
       }
 
       // 필터가 없으면 구성 제품 전체 트리가 수백 KB에 달해 컨텍스트를 소모한다.

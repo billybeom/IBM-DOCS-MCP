@@ -34,6 +34,8 @@ webMethods Hybrid Integration은 단일 제품이 아니라 아래 9개로 문�
 
 `get_iwhi_toc`를 필터 없이 호출하면 제품별 최상위 섹션만 보여줍니다. 전체 트리는 `product: "App Connect"` 처럼 좁혀서 조회하세요 (구성 제품 전체 트리는 400KB가 넘습니다).
 
+`product` 는 정확 매칭을 우선합니다. `"API Connect"` 는 API Connect 하나만 반환하고, 정확히 걸리는 게 없을 때만 부분 문자열로 찾습니다 (`"gateway"` → webMethods API Gateway).
+
 ## Setup
 
 ```bash
