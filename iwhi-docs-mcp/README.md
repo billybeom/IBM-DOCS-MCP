@@ -16,22 +16,23 @@ IBM webMethods Hybrid Integration (IWHI) 공식 문서를 검색하고 조회할
 
 ### 대상 구성 제품
 
-webMethods Hybrid Integration은 단일 제품이 아니라 아래 10개로 문서가 나뉘어 있으며, 이 서버는 전체를 한 번에 검색합니다.
+webMethods Hybrid Integration은 단일 제품이 아니라 아래 9개로 문서가 나뉘어 있으며, 이 서버는 전체를 한 번에 검색합니다.
 
 | Product key | Product |
 |---|---|
 | `SSC74RW_saas` | Hybrid Integration SaaS |
 | `SSGOVO` | webMethods Integration |
 | `SSJ8I7` | App Connect |
-| `SSFQ7G1_12.1.0` | API Connect 12.1.0 |
-| `SSFQ7G1_10.0.x` | API Connect 10.0.x |
+| `SSFQ7G1_12.1.0` | API Connect |
 | `SSMQ84` | webMethods B2B Integration |
 | `SSXAAZY` | webMethods API Gateway |
 | `SSMBFW` | Event Endpoint Management |
 | `SSO4MT7` | webMethods Developer Portal |
 | `SSS4PI` | API Connect for GraphQL |
 
-`get_iwhi_toc`를 필터 없이 호출하면 제품별 최상위 섹션만 보여줍니다. 전체 트리는 `product: "App Connect"` 처럼 좁혀서 조회하세요 (10개 제품 전체 트리는 400KB가 넘습니다).
+각 제품의 최신 버전만 포함합니다 (레거시 `SSFQ7G1_10.0.x` 는 검색 결과 중복을 피하기 위해 제외).
+
+`get_iwhi_toc`를 필터 없이 호출하면 제품별 최상위 섹션만 보여줍니다. 전체 트리는 `product: "App Connect"` 처럼 좁혀서 조회하세요 (구성 제품 전체 트리는 400KB가 넘습니다).
 
 ## Setup
 

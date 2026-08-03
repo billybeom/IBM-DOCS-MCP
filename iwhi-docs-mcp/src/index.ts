@@ -17,7 +17,7 @@ server.tool(
   {
     query: z.string().describe("Search query (e.g. 'API gateway', 'flow service', 'connector')"),
     lang: z.enum(["ko", "en"]).optional().default("en").describe("Language: 'en' (English, default — widest coverage) or 'ko' (Korean)"),
-    start: z.number().optional().default(0).describe("Result offset for pagination"),
+    start: z.number().min(0).optional().default(0).describe("Result offset for pagination (0 or greater)"),
     limit: z.number().optional().default(10).describe("Number of results (max 20)"),
   },
   async ({ query, lang, start, limit }) => {
@@ -116,7 +116,7 @@ server.tool(
         }
       }
 
-      // 필터가 없으면 10개 제품 전체 트리가 400KB를 넘어 컨텍스트를 소모한다.
+      // 필터가 없으면 구성 제품 전체 트리가 수백 KB에 달해 컨텍스트를 소모한다.
       // 좁히지 않은 요청은 최상위 섹션까지만 보여주고 좁히는 방법을 안내한다.
       const narrowed = Boolean(product || section);
       const maxDepth = narrowed ? Infinity : 1;

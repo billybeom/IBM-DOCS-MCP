@@ -19,7 +19,7 @@ IBM Bob, Claude Code, Claude Desktop 등 MCP를 지원하는 AI 클라이언트�
 | [idig-docs-mcp](./idig-docs-mcp) | IBM DataPower Interact Gateway 12.1.1 | 185+ | `search_idig_docs`, `read_idig_doc`, `get_idig_toc` |
 | [dpgw-11.0.0-docs-mcp](./dpgw-11.0.0-docs-mcp) | IBM DataPower Gateway 11.0.0 | 1,600+ | `search_dpgw1100_docs`, `read_dpgw1100_doc`, `get_dpgw1100_toc` |
 | [graphql-docs-mcp](./graphql-docs-mcp) | IBM API Connect for GraphQL Software 1.x | 75+ | `search_graphql_docs`, `read_graphql_doc`, `get_graphql_toc` |
-| [iwhi-docs-mcp](./iwhi-docs-mcp) | IBM webMethods Hybrid Integration (구성 제품 10종) | 1,200+ | `search_iwhi_docs`, `read_iwhi_doc`, `get_iwhi_toc` |
+| [iwhi-docs-mcp](./iwhi-docs-mcp) | IBM webMethods Hybrid Integration (구성 제품 9종) | 1,100+ | `search_iwhi_docs`, `read_iwhi_doc`, `get_iwhi_toc` |
 | [instana-docs-mcp](./instana-docs-mcp) | IBM Instana Observability | 760+ | `search_instana_docs`, `read_instana_doc`, `get_instana_toc` |
 | [concert-docs-mcp](./concert-docs-mcp) | IBM Concert 2.3.x | 260+ | `search_concert_docs`, `read_concert_doc`, `get_concert_toc` |
 

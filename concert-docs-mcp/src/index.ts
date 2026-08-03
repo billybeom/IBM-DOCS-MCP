@@ -16,7 +16,7 @@ server.tool(
   "Search IBM Concert documentation. Returns matching topics with titles, snippets, and URLs.",
   {
     query: z.string().describe("Search query (e.g. 'application', 'inventory', 'integration')"),
-    start: z.number().optional().default(0).describe("Result offset for pagination"),
+    start: z.number().min(0).optional().default(0).describe("Result offset for pagination (0 or greater)"),
     limit: z.number().optional().default(10).describe("Number of results (max 20)"),
   },
   async ({ query, start, limit }) => {
