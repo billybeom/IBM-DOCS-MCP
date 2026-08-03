@@ -17,8 +17,8 @@ Claude Code, Claude Desktop, IBM Bob 등 MCP를 지원하는 AI 클라이언트�
 ## Setup
 
 ```bash
-git clone https://github.com/Aiden-Kwak/IBM-APIC-DOC-MCP.git
-cd apic-docs-mcp
+git clone https://github.com/billybeom/IBM-DOCS-MCP.git
+cd IBM-DOCS-MCP/apic-docs-mcp
 npm install
 npm run build
 ```

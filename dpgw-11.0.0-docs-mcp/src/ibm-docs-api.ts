@@ -1,6 +1,8 @@
-// IBM Instana Observability — https://www.ibm.com/docs/en/instana-observability
-const PRODUCT_KEY = "SSE1JP5";
+// IBM DataPower Gateway 11.0.0 — https://www.ibm.com/docs/en/datapower-gateway/11.0.0
+const PRODUCT_KEY = "SS9H2Y_11.0.0";
+
 const BASE_URL = "https://www.ibm.com/docs";
+
 const API_BASE = `${BASE_URL}/api/v1`;
 const USER_AGENT =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";

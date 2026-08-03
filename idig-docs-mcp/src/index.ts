@@ -106,10 +106,23 @@ server.tool(
             t.label.toLowerCase().includes(lower) ||
             t.topicId.toLowerCase().includes(lower)
         );
-        if (filtered.length > 0) {
-          topics = filtered;
+        if (filtered.length === 0) {
+          return {
+            content: [
+              {
+                type: "text" as const,
+                text: `No top-level section matching "${section}" was found. Call this tool without 'section' to list the available sections.`,
+              },
+            ],
+          };
         }
+        topics = filtered;
       }
+
+      // 필터가 없으면 전체 트리가 수백 KB에 달해 컨텍스트를 소모한다.
+      // 좁히지 않은 요청은 최상위 섹션까지만 보여주고 좁히는 방법을 안내한다.
+      const narrowed = Boolean(section);
+      const maxDepth = narrowed ? Infinity : 1;
 
       function formatToc(items: TocItem[], depth = 0): string {
         return items
@@ -117,8 +130,13 @@ server.tool(
             const indent = "  ".repeat(depth);
             let line = `${indent}- ${item.label}`;
             if (item.href) line += ` [${item.href}]`;
-            if (item.topics && item.topics.length > 0) {
-              line += "\n" + formatToc(item.topics, depth + 1);
+            const kids = item.topics ?? [];
+            if (kids.length > 0) {
+              if (depth + 1 < maxDepth) {
+                line += "\n" + formatToc(kids, depth + 1);
+              } else {
+                line += ` _(+${kids.length} subtopics)_`;
+              }
             }
             return line;
           })
@@ -129,7 +147,11 @@ server.tool(
         content: [
           {
             type: "text" as const,
-            text: `# IBM DataPower Interact Gateway 12.1.1 - Table of Contents\n\n${formatToc(topics)}`,
+            text:
+              `# IBM DataPower Interact Gateway 12.1.1 - Table of Contents\n\n${formatToc(topics)}` +
+              (narrowed
+                ? ""
+                : `\n\n_Showing top-level sections only. Pass \`section\` to expand the full tree._`),
           },
         ],
       };

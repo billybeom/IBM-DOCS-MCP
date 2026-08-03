@@ -7,15 +7,16 @@ import { searchDocs, fetchToc, fetchDocContent, type TocItem } from "./ibm-docs-
 import { extractAndConvert, stripHtmlTags } from "./utils.js";
 
 const server = new McpServer({
-  name: "concert-docs",
+  name: "dpgw1100-docs",
   version: "1.0.0",
 });
 
+// Tool 1: 문서 검색
 server.tool(
-  "search_concert_docs",
-  "Search IBM Concert documentation. Returns matching topics with titles, snippets, and URLs.",
+  "search_dpgw1100_docs",
+  "Search IBM DataPower Gateway 11.0.0 documentation. Returns matching topics with titles, snippets, and URLs.",
   {
-    query: z.string().describe("Search query (e.g. 'application', 'inventory', 'integration')"),
+    query: z.string().describe("Search query (e.g. 'gateway', 'oauth', 'catalog')"),
     start: z.number().optional().default(0).describe("Result offset for pagination"),
     limit: z.number().optional().default(10).describe("Number of results (max 20)"),
   },
@@ -56,14 +57,15 @@ server.tool(
   }
 );
 
+// Tool 2: 문서 페이지 읽기
 server.tool(
-  "read_concert_doc",
-  "Read a specific IBM Concert documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+  "read_dpgw1100_doc",
+  "Read a specific IBM DataPower Gateway 11.0.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
   {
     href: z
       .string()
       .describe(
-        "Document href path (e.g. 'SSQNYH_2.3.x/...')"
+        "Document href path (e.g. 'SS9H2Y_11.0.0/apigw/gatewaypeering.html', 'SS9H2Y_11.0.0/admin/administration.html', 'SS9H2Y_11.0.0/commands/mpgw_global.html')"
       ),
   },
   async ({ href }) => {
@@ -82,14 +84,15 @@ server.tool(
   }
 );
 
+// Tool 3: 목차(TOC) 조회
 server.tool(
-  "get_concert_toc",
-  "Get the table of contents for IBM Concert documentation. Shows the full document structure with sections and topics.",
+  "get_dpgw1100_toc",
+  "Get the table of contents for IBM DataPower Gateway 11.0.0 documentation. Shows the full document structure with sections and topics.",
   {
     section: z
       .string()
       .optional()
-      .describe("Optional: filter to a specific section by label (e.g. 'Installation', 'Integrating', 'inventory')"),
+      .describe("Optional: filter to a specific section by label (e.g. 'Installing', 'Security')"),
   },
   async ({ section }) => {
     try {
@@ -145,7 +148,7 @@ server.tool(
           {
             type: "text" as const,
             text:
-              `# IBM Concert - Table of Contents\n\n${formatToc(topics)}` +
+              `# IBM DataPower Gateway 11.0.0 - Table of Contents\n\n${formatToc(topics)}` +
               (narrowed
                 ? ""
                 : `\n\n_Showing top-level sections only. Pass \`section\` to expand the full tree._`),
@@ -164,7 +167,7 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("Concert Docs MCP server running on stdio");
+  console.error("DataPower Gateway 11.0.0 Docs MCP server running on stdio");
 }
 
 main().catch((error) => {

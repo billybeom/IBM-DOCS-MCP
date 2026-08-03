@@ -15,8 +15,8 @@ IBM Instana Observability 공식 문서를 검색하고 조회할 수 있는 비
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/instana-docs-mcp.git
-cd instana-docs-mcp
+git clone https://github.com/billybeom/IBM-DOCS-MCP.git
+cd IBM-DOCS-MCP/instana-docs-mcp
 npm install
 npm run build
 ```

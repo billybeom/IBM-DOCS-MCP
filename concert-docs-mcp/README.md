@@ -15,8 +15,8 @@ IBM Concert 공식 문서를 검색하고 조회할 수 있는 비공식 MCP(Mod
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/concert-docs-mcp.git
-cd concert-docs-mcp
+git clone https://github.com/billybeom/IBM-DOCS-MCP.git
+cd IBM-DOCS-MCP/concert-docs-mcp
 npm install
 npm run build
 ```
