@@ -1,7 +1,6 @@
 # ibm-docs-mcp
 
-https://github.com/Aiden-Kwak/IBM-DOCS-MCP
-위의 레파지토리 포크해서 개인적으로 필요한 IBM 제품 Document 추가합니다.
+https://github.com/Aiden-Kwak/IBM-DOCS-MCP 레파지토리 포크해서 개인적으로 필요한 IBM 제품 Document 추가합니다.
 - IBM DataPower Interact Gateway 12.1.1
 - IBM API Connect for GraphQL Software 1.1.x
 
