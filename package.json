@@ -13,13 +13,15 @@
     "graphql-docs-mcp",
     "idig-docs-mcp",
     "instana-docs-mcp",
-    "iwhi-docs-mcp"
+    "iwhi-docs-mcp",
+    "unified"
   ],
   "scripts": {
     "build": "tsc -b",
     "clean": "tsc -b --clean",
     "rebuild": "tsc -b --clean && tsc -b",
-    "dump-tools": "node scripts/dump-tools.mjs"
+    "dump-tools": "node scripts/dump-tools.mjs",
+    "eval-routing": "node scripts/eval-routing.mjs"
   },
   "devDependencies": {
     "typescript": "^5.7.0"

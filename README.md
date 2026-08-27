@@ -60,13 +60,19 @@ IBM-DOCS-MCP/
 ├── package-lock.json         # 1개 (서버별 lock 없음)
 ├── core/                     # @ibm-docs-mcp/core
 │   └── src/
-│       ├── products.ts         # ★ 제품 레지스트리 — 서버 간 차이가 전부 여기
+│       ├── products.ts         # ★ 제품 레지스트리 — 제품을 추가하는 곳
 │       ├── ibm-docs-api.ts     # IBM Docs API 클라이언트 (검색/TOC/콘텐츠)
 │       ├── utils.ts            # HTML → Markdown 변환
-│       └── server.ts           # 툴 3개를 등록한 MCP 서버 생성
-├── apic-docs-mcp/src/index.ts  # 엔트리 (3줄)
+│       ├── toc-view.ts         # TOC 렌더링 (레거시/통합 공용)
+│       ├── routing-hints.ts    # product enum 설명 — 제품 구분 힌트
+│       ├── server.ts           # 제품별 서버 (레거시, 툴 3개)
+│       └── unified.ts          # 통합 서버 (툴 3개 + product 파라미터)
+├── unified/src/index.ts        # 통합 서버 엔트리 (3줄)
+├── apic-docs-mcp/src/index.ts  # 제품별 엔트리 (3줄)
 ├── … 나머지 6개도 동일
-└── scripts/dump-tools.mjs
+└── scripts/
+    ├── dump-tools.mjs          # 툴 표면 덤프 (변경 전후 비교용)
+    └── eval-routing.mjs        # 제품 라우팅 정확도 측정
 ```
 
 각 서버 엔트리는 이게 전부입니다:
@@ -89,6 +95,58 @@ runServer(PRODUCTS.apic);
 IWHI 처럼 구성 제품이 여러개면 `components` 에 제품 키를 나열하면 됩니다.
 `components` 가 2개 이상이면 TOC 가 제품별로 그룹핑되고 `product` 필터가 자동으로 붙습니다.
 `langs` 를 지정하면 `lang` 파라미터가 노출됩니다.
+
+## 통합 서버 (권장)
+
+제품별 서버 7개 대신 **서버 하나 · 툴 3개**로 전 제품을 다룹니다. 제품은 툴 이름이 아니라 `product` 파라미터로 지정합니다.
+
+| | 제품별 서버 (레거시) | 통합 서버 |
+|---|---|---|
+| MCP 서버 항목 | 7개 | **1개** |
+| 툴 | 21개 (~3,360토큰) | **3개** |
+| 제품 추가 시 | 폴더 + 설정 항목 추가 | `products.ts` 한 블록 |
+
+```json
+{
+  "mcpServers": {
+    "ibm-docs": {
+      "command": "node",
+      "args": ["C:/Work/McpTools/IBM-DOCS-MCP/unified/dist/index.js"]
+    }
+  }
+}
+```
+
+**프로젝트별로 제품 고정** — `IBM_DOCS_PRODUCTS` 로 노출 제품을 좁힙니다. 제품이 하나로 좁혀지면 `product` 파라미터가 스키마에서 아예 사라져, 모델이 제품을 고를 일이 없어집니다.
+
+```json
+{ "mcpServers": { "ibm-docs": {
+  "command": "node",
+  "args": ["C:/Work/McpTools/IBM-DOCS-MCP/unified/dist/index.js"],
+  "env": { "IBM_DOCS_PRODUCTS": "apic,idig" }
+}}}
+```
+
+### 툴
+
+| Tool | 설명 |
+|---|---|
+| `search_ibm_docs` | `product` 지정 시 해당 제품 검색. **생략하면 전 제품을 검색해 제품별로 묶어** 반환(라우팅 모드) — 어느 제품인지 모를 때 여기서 고르면 됩니다. |
+| `read_ibm_doc` | 문서를 Markdown 으로 조회. href 가 제품 키를 포함하므로 `product` 인자가 필요 없습니다. |
+| `get_ibm_toc` | 인자 없이 호출하면 제품 목록, `product` 지정 시 최상위 섹션, `section`/`component` 까지 주면 전체 트리. |
+
+### 라우팅 정확도
+
+`npm run eval-routing` 으로 측정합니다. 각 제품 TOC 의 실제 문서 제목을 질의로 삼아 "올바른 제품이 결과에 드러나는가"를 봅니다.
+
+| | 결과 |
+|---|---|
+| 라우팅 모드 결과에 정답 제품 포함 | **100%** (42/42) |
+| 평균 제품 그룹 수 | 3.5개 |
+
+제품별 개별 검색을 여러 번 하는 방식(fan-out)도 시험했지만, **검색 1회를 제품별로 묶는 쪽이 요청 수는 1/6 이면서 정답 포함률은 더 높았습니다**.
+
+남는 한계는 알고리즘이 아니라 **제품 겹침**입니다 — `iwhi` 는 API Connect 와 API Connect for GraphQL 을 구성 제품으로 품고 있어 `apic`/`graphql` 과 실제로 겹칩니다. 라우팅 결과에 구성 제품 라벨을 함께 실어 이 겹침이 모델에게 보이도록 했고(`component` 필드), `product` 설명에도 혼동 쌍을 명시해 두었습니다.
 
 ## Configuration
 

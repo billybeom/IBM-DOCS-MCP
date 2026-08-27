@@ -1,0 +1,212 @@
+[
+  {
+    "product": "apic",
+    "query": "Language versions offered by API Connect",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.overview.doc/g11n-langs-list.html"
+  },
+  {
+    "product": "apic",
+    "query": "Management subsystem disaster recovery",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.install.doc/mgmt_dr_ova.html"
+  },
+  {
+    "product": "apic",
+    "query": "Custom HTTP header",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.apistudio.doc/co_policy_routing_custom_http_header.html"
+  },
+  {
+    "product": "apic",
+    "query": "Running Config Sync as a cronjob on Kubernetes",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.apionprem.doc/apic_config_sync_cronjob_k8s.html"
+  },
+  {
+    "product": "apic",
+    "query": "Analytics CLI",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.analytics.doc/using_the_analytics_cli.html"
+  },
+  {
+    "product": "apic",
+    "query": "Exposing a SOAP API and GraphQL API to applications",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.wmapigateway.doc/apigateway_ug/ta-apis_expose_soap.html"
+  },
+  {
+    "product": "concert",
+    "query": "Developer focus onboarding flow",
+    "href": "SSQNYH_2.3.x/doc/developer-focus-onboarding-flow.html"
+  },
+  {
+    "product": "concert",
+    "query": "Setting up external repositories for Concert Data Apps (Kubernetes)",
+    "href": "SSQNYH_2.3.x/doc/byor_concert_data_apps_ocp.html"
+  },
+  {
+    "product": "concert",
+    "query": "Exporting an application or environment",
+    "href": "SSQNYH_2.3.x/doc/exporting_an_application_or_environment_definition.html"
+  },
+  {
+    "product": "concert",
+    "query": "Uploading SSH Key details",
+    "href": "SSQNYH_2.3.x/doc/uploading-ssh-keys.html"
+  },
+  {
+    "product": "concert",
+    "query": "Package remediation using Concert Workflows",
+    "href": "SSQNYH_2.3.x/doc/package_remediation_using_workflow.html"
+  },
+  {
+    "product": "concert",
+    "query": "Validating workflows",
+    "href": "SSQNYH_2.3.x/using/validating-workflows.html"
+  },
+  {
+    "product": "dpgw1100",
+    "query": "New in 11.0.0",
+    "href": "SS9H2Y_11.0.0/releasedetails/whats_new.html"
+  },
+  {
+    "product": "dpgw1100",
+    "query": "Enabling the Interoperability Test Service",
+    "href": "SS9H2Y_11.0.0/documentprocessing/wtx_enablingtheinteroperabilitytestservice.html"
+  },
+  {
+    "product": "dpgw1100",
+    "query": "wsdl-attachment-part (API schema)",
+    "href": "SS9H2Y_11.0.0/commands/wsdl-attachment-part_apischema.html"
+  },
+  {
+    "product": "dpgw1100",
+    "query": "password (deprecated - IMS Callout handler)",
+    "href": "SS9H2Y_11.0.0/commands/password_imscallout.html"
+  },
+  {
+    "product": "dpgw1100",
+    "query": "quota-enforcement-switch-primary (quota enforcement server)",
+    "href": "SS9H2Y_11.0.0/commands/quota-enforcement-switch-primary_quotaenforcementserver.html"
+  },
+  {
+    "product": "dpgw1100",
+    "query": "monitor-count (XML firewall)",
+    "href": "SS9H2Y_11.0.0/commands/monitor-count_xmlfirewall.html"
+  },
+  {
+    "product": "graphql",
+    "query": "Understanding API Connect for GraphQL",
+    "href": "SSMNED_ESS_1.x/src/overview/what-is-essentials.html"
+  },
+  {
+    "product": "graphql",
+    "query": "directive @cost",
+    "href": "SSMNED_ESS_1.x/src/directives/directives/cost.html"
+  },
+  {
+    "product": "graphql",
+    "query": "directive @key",
+    "href": "SSMNED_ESS_1.x/src/directives/directives/federation/key.html"
+  },
+  {
+    "product": "graphql",
+    "query": "input StepZen_GraphQLPrefix",
+    "href": "SSMNED_ESS_1.x/src/directives/types/StepZen_GraphQLPrefix.html"
+  },
+  {
+    "product": "graphql",
+    "query": "Connecting a MySQL database",
+    "href": "SSMNED_ESS_1.x/src/backends/connect-mysql-db.html"
+  },
+  {
+    "product": "graphql",
+    "query": "Using JWT-based access control",
+    "href": "SSMNED_ESS_1.x/src/access-control/access-control-jwt.html"
+  },
+  {
+    "product": "idig",
+    "query": "Known limitations",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.aigateway.doc/idig_overview/idig_known_limitations.html"
+  },
+  {
+    "product": "idig",
+    "query": "Defining kinds",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.aigateway.doc/idig_studio/idig_stu_supported_kinds.html"
+  },
+  {
+    "product": "idig",
+    "query": "Invoke Azure OpenAI Models ID",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.aigateway.doc/idig_studio/idig_nano_gw_invoke_azure_open_ai_models_id.html"
+  },
+  {
+    "product": "idig",
+    "query": "Specifying advanced security settings",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/administration/ta-advanced_security_settings.html"
+  },
+  {
+    "product": "idig",
+    "query": "Assigning user privileges",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/manage_users/ta-assign_privileges.html"
+  },
+  {
+    "product": "idig",
+    "query": "Property types",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/custom_asset/re-property_types.html"
+  },
+  {
+    "product": "instana",
+    "query": "Tracers and AutoTrace webhook",
+    "href": "SSO4JPD/src/pages/releases/release-notes-for-instana-tracers.html"
+  },
+  {
+    "product": "instana",
+    "query": "Apache Solr sensor releases",
+    "href": "SSO4JPD/src/pages/ecosystem/apache-solr/apache_solr_rn.html"
+  },
+  {
+    "product": "instana",
+    "query": "Monitoring a Windows host",
+    "href": "SSO4JPD/src/pages/ecosystem/host/windows_host.html"
+  },
+  {
+    "product": "instana",
+    "query": "OS Process sensor releases",
+    "href": "SSO4JPD/src/pages/ecosystem/os-process/os_process_rn.html"
+  },
+  {
+    "product": "instana",
+    "query": "Creating Synthetic test credentials",
+    "href": "SSO4JPD/src/pages/synthetic_monitoring/synmon_security.html"
+  },
+  {
+    "product": "instana",
+    "query": "Making your Instana dashboards publicly shareable",
+    "href": "SSO4JPD/src/pages/ecosystem/integration-package-management/dashboards-publicly-shareable.html"
+  },
+  {
+    "product": "iwhi",
+    "query": "Solution architecture",
+    "href": "SSC74RW_saas/ipaas/ipaas_architecture.html"
+  },
+  {
+    "product": "iwhi",
+    "query": "Understanding client connections",
+    "href": "SSGOVO/re-sap_erp_monitoring_sap__erp_connection_pool_client_connections.html"
+  },
+  {
+    "product": "iwhi",
+    "query": "Using query expressions for log search",
+    "href": "SSGOVO/ta-monitor_general_audit_logs_using_filters_in_audit_logs_supported_query_expressions.html"
+  },
+  {
+    "product": "iwhi",
+    "query": "Viewing log messages in an external log viewer",
+    "href": "SSJ8I7/ace_ipaas/ipaas_logs_external.html"
+  },
+  {
+    "product": "iwhi",
+    "query": "Deploying application to IBM Code Engine",
+    "href": "SSFQ7G1_12.1.0/com.ibm.apic.assistant.doc/deploying_code_engine.html"
+  },
+  {
+    "product": "iwhi",
+    "query": "Viewing provider list and provider configuration",
+    "href": "SSFQ7G1_12.1.0/com.ibm.apic.wmapigatewaysaas.doc/ag_sc_viewing_provider_list_configuration.html"
+  }
+]

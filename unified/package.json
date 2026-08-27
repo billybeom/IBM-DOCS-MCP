@@ -1,0 +1,14 @@
+{
+  "name": "ibm-docs-mcp-unified",
+  "version": "1.0.0",
+  "description": "Unified MCP server for all registered IBM product documentation",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@ibm-docs-mcp/core": "*"
+  }
+}
