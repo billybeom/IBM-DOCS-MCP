@@ -10,6 +10,7 @@ import {
 } from "./ibm-docs-api.js";
 import { extractAndConvert, stripHtmlTags } from "./utils.js";
 import { capText } from "./toc-view.js";
+import { installDiagnostics } from "./diagnostics.js";
 import type { ProductDefinition } from "./products.js";
 
 // lang 파라미터를 노출하는 제품(현재 IWHI)에서만 쓰인다.
@@ -301,6 +302,7 @@ export function createServer(product: ProductDefinition): McpServer {
 /** 서버를 만들어 stdio 로 붙인다. 각 <제품>-docs-mcp 엔트리가 호출한다. */
 export async function runServer(product: ProductDefinition): Promise<void> {
   try {
+    installDiagnostics(product.serverName);
     const server = createServer(product);
     const transport = new StdioServerTransport();
     await server.connect(transport);

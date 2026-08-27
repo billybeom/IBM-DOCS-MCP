@@ -13,6 +13,7 @@ import {
 import { extractAndConvert, stripHtmlTags } from "./utils.js";
 import { PRODUCTS, type ProductDefinition } from "./products.js";
 import { buildProductDescription } from "./routing-hints.js";
+import { installDiagnostics } from "./diagnostics.js";
 import {
   formatToc,
   filterSections,
@@ -304,6 +305,7 @@ export async function runUnifiedServer(
   products: ProductDefinition[] = selectProducts()
 ): Promise<void> {
   try {
+    installDiagnostics("ibm-docs");
     const server = createUnifiedServer(products);
     await server.connect(new StdioServerTransport());
     console.error(
