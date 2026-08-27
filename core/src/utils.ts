@@ -1,8 +1,25 @@
-import { JSDOM } from "jsdom";
-import TurndownService from "turndown";
+// jsdom/turndown 은 read 툴에서만 쓰는데, top-level import 하면
+// server.connect() 전에 전부 로드되어 기동이 느려진다. 콜드 파일 캐시에서 특히 크다
+// (jsdom 계열만 node_modules 파일의 17.5% 를 차지한다).
+// 타입은 type-only 로 유지하고(런타임에 지워짐), 실체는 첫 사용 시점에 동기 로드한다.
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
+
+type TurndownCtor = typeof import("turndown");
+type JSDOMCtor = (typeof import("jsdom"))["JSDOM"];
+
+let turndownCtor: TurndownCtor | undefined;
+let jsdomCtor: JSDOMCtor | undefined;
+
+const loadTurndown = (): TurndownCtor =>
+  (turndownCtor ??= require("turndown") as TurndownCtor);
+
+const loadJSDOM = (): JSDOMCtor =>
+  (jsdomCtor ??= (require("jsdom") as typeof import("jsdom")).JSDOM);
 
 export function htmlToMarkdown(html: string): string {
-  const turndown = new TurndownService({
+  const turndown = new (loadTurndown())({
     headingStyle: "atx",
     bulletListMarker: "-",
     codeBlockStyle: "fenced",
@@ -53,7 +70,7 @@ export function htmlToMarkdown(html: string): string {
 }
 
 export function extractAndConvert(html: string): string {
-  const dom = new JSDOM(html);
+  const dom = new (loadJSDOM())(html);
   const doc = dom.window.document;
 
   const main =
