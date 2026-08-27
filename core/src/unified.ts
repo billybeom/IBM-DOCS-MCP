@@ -105,6 +105,19 @@ export function createUnifiedServer(products: ProductDefinition[]): McpServer {
   };
 
   const text = (s: string) => ({ content: [{ type: "text" as const, text: s }] });
+
+  /**
+   * TOC 는 좁혀도 커질 수 있다. 클라이언트마다 툴 결과 크기 제한이 있고
+   * 넘기면 결과가 통째로 버려지므로, 넘칠 때는 잘라서라도 쓸 수 있게 돌려준다.
+   */
+  const TOC_MAX_CHARS = 24000;
+  const capped = (body: string, how: string) =>
+    body.length <= TOC_MAX_CHARS
+      ? text(body)
+      : text(
+          body.slice(0, TOC_MAX_CHARS) +
+            `\n\n_...잘렸습니다 (${body.length}자 중 ${TOC_MAX_CHARS}자). ${how}_`
+        );
   const fail = (s: string) => ({ ...text(s), isError: true });
 
   // ---------------------------------------------------------------- search
@@ -256,18 +269,22 @@ export function createUnifiedServer(products: ProductDefinition[]): McpServer {
           results = matched;
         }
 
-        const narrowed = Boolean(component || section);
-        const maxDepth = narrowed ? Infinity : 1;
+        // 전체 트리를 펼치는 조건은 section 뿐이다. component 로만 좁혀도 펼치면
+        // 구성 제품 하나가 5만자를 넘겨 클라이언트의 툴 결과 크기 제한에 걸린다.
+        const maxDepth = section ? Infinity : 1;
         const heading = `# ${target.tocHeading} - Table of Contents`;
-        const hint = narrowed
+        const hint = section
           ? ""
-          : "\n\n_Showing top-level sections only. Pass `section` (or `component`) to expand the full tree._";
+          : "\n\n_Showing top-level sections only. Pass `section` to expand the full tree._";
 
         // 구성 제품이 여럿인 제품은 component 로 하나만 남겨도 그룹 렌더러를 쓴다.
         // 그래야 "## App Connect (SSJ8I7)" 처럼 어느 구성인지가 드러난다.
         if (target.components.length > 1) {
           const body = renderGrouped(results, section, maxDepth);
-          return text(`${heading}\n\n` + (body || "_No sections matched the given filters._") + hint);
+          return capped(
+            `${heading}\n\n` + (body || "_No sections matched the given filters._") + hint,
+            "`component` 로 구성 제품 하나를 고르거나 `section` 을 더 좁히세요."
+          );
         }
 
         const only = results[0];
@@ -278,7 +295,10 @@ export function createUnifiedServer(products: ProductDefinition[]): McpServer {
         if (topics === null) {
           return text(`No top-level section matching "${section}" was found in "${target.id}". Call this tool without 'section' to list the available sections.`);
         }
-        return text(`${heading}\n\n${formatToc(topics, maxDepth)}` + hint);
+        return capped(
+          `${heading}\n\n${formatToc(topics, maxDepth)}` + hint,
+          "`section` 을 더 좁히세요."
+        );
       } catch (error) {
         return fail(`TOC error: ${error}`);
       }
