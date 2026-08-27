@@ -30,14 +30,65 @@ IBM Bob, Claude Code, Claude Desktop 등 MCP를 지원하는 AI 클라이언트�
 
 ## Quick Start
 
-```bash
-# 원하는 서버 디렉토리로 이동
-cd apic-docs-mcp  # 또는 idig-docs-mcp, dpgw-11.0.0-docs-mcp, graphql-docs-mcp, iwhi-docs-mcp, instana-docs-mcp, concert-docs-mcp
+npm workspaces 단일 트리입니다. **루트에서 한 번** 설치/빌드하면 7개 서버가 모두 빌드됩니다.
 
-# 설치 및 빌드
+```bash
+git clone https://github.com/billybeom/IBM-DOCS-MCP.git
+cd IBM-DOCS-MCP
 npm install
 npm run build
 ```
+
+빌드 결과는 종전과 같은 `<서버>/dist/index.js` 에 생성되므로, 기존 MCP 클라이언트 설정을 그대로 쓰면 됩니다.
+
+| 명령 | 설명 |
+|---|---|
+| `npm run build` | 변경된 패키지만 증분 빌드 (`tsc -b`) |
+| `npm run rebuild` | 전체 클린 후 재빌드 |
+| `npm run dump-tools` | 7개 서버를 띄워 `tools/list` 결과를 JSON 으로 출력 (변경 전후 비교용) |
+
+특정 서버 하나만 빌드하려면 `cd apic-docs-mcp && npm run build` 도 됩니다 (공용 코어가 먼저 빌드됩니다).
+
+## 구조
+
+서버마다 같은 코드 3파일(≈330줄)이 7벌 복제돼 있던 것을 공용 코어 하나로 합쳤습니다.
+서버별로 실제 달랐던 값(제품 키, 툴 이름, 설명 문구)은 전부 레지스트리에 데이터로 모여 있습니다.
+
+```
+IBM-DOCS-MCP/
+├── package.json              # workspaces 루트
+├── package-lock.json         # 1개 (서버별 lock 없음)
+├── core/                     # @ibm-docs-mcp/core
+│   └── src/
+│       ├── products.ts         # ★ 제품 레지스트리 — 서버 간 차이가 전부 여기
+│       ├── ibm-docs-api.ts     # IBM Docs API 클라이언트 (검색/TOC/콘텐츠)
+│       ├── utils.ts            # HTML → Markdown 변환
+│       └── server.ts           # 툴 3개를 등록한 MCP 서버 생성
+├── apic-docs-mcp/src/index.ts  # 엔트리 (3줄)
+├── … 나머지 6개도 동일
+└── scripts/dump-tools.mjs
+```
+
+각 서버 엔트리는 이게 전부입니다:
+
+```ts
+#!/usr/bin/env node
+
+import { runServer, PRODUCTS } from "@ibm-docs-mcp/core";
+
+runServer(PRODUCTS.apic);
+```
+
+## 새 제품 추가하기
+
+1. `core/src/products.ts` 에 블록 하나 추가 (제품 키, 툴 이름, 설명 문구)
+2. `<제품>-docs-mcp/` 폴더에 `package.json` / `tsconfig.json` / 3줄짜리 `src/index.ts`
+3. 루트 `package.json` 의 `workspaces` 와 `tsconfig.json` 의 `references` 에 등록
+4. `npm install && npm run build`
+
+IWHI 처럼 구성 제품이 여러개면 `components` 에 제품 키를 나열하면 됩니다.
+`components` 가 2개 이상이면 TOC 가 제품별로 그룹핑되고 `product` 필터가 자동으로 붙습니다.
+`langs` 를 지정하면 `lang` 파라미터가 노출됩니다.
 
 ## Configuration
 
@@ -100,7 +151,7 @@ claude mcp add apic-docs -- node /absolute/path/to/apic-docs-mcp/dist/index.js
 
 ## Tech Stack
 
-- TypeScript + Node.js
+- TypeScript + Node.js (npm workspaces 모노레포)
 - `@modelcontextprotocol/sdk` - MCP 프로토콜 구현
 - `jsdom` + `turndown` - HTML to Markdown 변환
 - IBM Docs API (`ibm.com/docs/api/v1`) - 문서 검색 및 조회

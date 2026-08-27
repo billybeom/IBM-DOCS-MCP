@@ -1,0 +1,27 @@
+{
+  "name": "ibm-docs-mcp",
+  "version": "1.0.0",
+  "description": "Unofficial MCP servers for IBM product documentation",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "core",
+    "apic-docs-mcp",
+    "concert-docs-mcp",
+    "dpgw-11.0.0-docs-mcp",
+    "graphql-docs-mcp",
+    "idig-docs-mcp",
+    "instana-docs-mcp",
+    "iwhi-docs-mcp"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "tsc -b --clean",
+    "rebuild": "tsc -b --clean && tsc -b",
+    "dump-tools": "node scripts/dump-tools.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

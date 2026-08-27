@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "references": [
+    { "path": "core" },
+    { "path": "apic-docs-mcp" },
+    { "path": "concert-docs-mcp" },
+    { "path": "dpgw-11.0.0-docs-mcp" },
+    { "path": "graphql-docs-mcp" },
+    { "path": "idig-docs-mcp" },
+    { "path": "instana-docs-mcp" },
+    { "path": "iwhi-docs-mcp" }
+  ]
+}

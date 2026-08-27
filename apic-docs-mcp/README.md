@@ -16,12 +16,17 @@ Claude Code, Claude Desktop, IBM Bob 등 MCP를 지원하는 AI 클라이언트�
 
 ## Setup
 
+이 저장소는 npm workspaces 단일 트리입니다. **루트에서 한 번** 설치/빌드하면 모든 서버가 함께 빌드됩니다.
+
 ```bash
 git clone https://github.com/billybeom/IBM-DOCS-MCP.git
-cd IBM-DOCS-MCP/apic-docs-mcp
+cd IBM-DOCS-MCP
 npm install
 npm run build
 ```
+
+빌드 결과 경로는 종전과 같은 `apic-docs-mcp/dist/index.js` 입니다.
+이 서버만 빌드하려면 `cd apic-docs-mcp && npm run build` 도 됩니다 (공용 코어가 먼저 빌드됩니다).
 
 ### IBM Bob
 
