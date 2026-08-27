@@ -2,6 +2,21 @@
 
 import type { ComponentToc, TocItem } from "./ibm-docs-api.js";
 
+/**
+ * TOC 는 좁혀도 커질 수 있다. 클라이언트마다 툴 결과 크기 제한이 있고
+ * 넘기면 결과가 통째로 버려지므로, 넘칠 때는 잘라서라도 쓸 수 있게 돌려준다.
+ */
+export const TOC_MAX_CHARS = 24000;
+
+/** 상한을 넘으면 잘라내고 더 좁히는 방법을 덧붙인다. */
+export function capText(body: string, how: string): string {
+  if (body.length <= TOC_MAX_CHARS) return body;
+  return (
+    body.slice(0, TOC_MAX_CHARS) +
+    `\n\n_...잘렸습니다 (${body.length}자 중 ${TOC_MAX_CHARS}자). ${how}_`
+  );
+}
+
 /** 트리를 마크다운 목록으로. maxDepth 를 넘는 하위는 개수만 표시한다. */
 export function formatToc(items: TocItem[], maxDepth: number, depth = 0): string {
   return items

@@ -9,6 +9,7 @@ import {
   type TocItem,
 } from "./ibm-docs-api.js";
 import { extractAndConvert, stripHtmlTags } from "./utils.js";
+import { capText } from "./toc-view.js";
 import type { ProductDefinition } from "./products.js";
 
 // lang 파라미터를 노출하는 제품(현재 IWHI)에서만 쓰인다.
@@ -175,10 +176,9 @@ export function createServer(product: ProductDefinition): McpServer {
           results = matched;
         }
 
-        // 필터가 없으면 전체 트리가 수백 KB에 달해 컨텍스트를 소모한다.
-        // 좁히지 않은 요청은 최상위 섹션까지만 보여주고 좁히는 방법을 안내한다.
-        const narrowed = Boolean(productFilter || section);
-        const maxDepth = narrowed ? Infinity : 1;
+        // 전체 트리를 펼치는 조건은 section 뿐이다. 구성 제품 하나로 좁혀도
+        // 펼치면 5만자를 넘겨 클라이언트의 툴 결과 크기 제한에 걸린다.
+        const maxDepth = section ? Infinity : 1;
 
         function formatToc(items: TocItem[], depth = 0): string {
           return items
@@ -230,11 +230,13 @@ export function createServer(product: ProductDefinition): McpServer {
             content: [
               {
                 type: "text" as const,
-                text:
+                text: capText(
                   `${heading}\n\n${formatToc(topics)}` +
-                  (narrowed
-                    ? ""
-                    : `\n\n_Showing top-level sections only. Pass \`section\` to expand the full tree._`),
+                    (section
+                      ? ""
+                      : `\n\n_Showing top-level sections only. Pass \`section\` to expand the full tree._`),
+                  "`section` 을 더 좁히세요."
+                ),
               },
             ],
           };
@@ -251,18 +253,20 @@ export function createServer(product: ProductDefinition): McpServer {
         });
 
         const body = blocks.filter((b): b is string => b !== null).join("\n\n");
-        const hint = narrowed
+        const hint = section
           ? ""
-          : `\n\n_Showing top-level sections only. Pass \`product\` (e.g. "${product.toc.productExample}") or \`section\` to expand the full tree._`;
+          : `\n\n_Showing top-level sections only. Pass \`section\` to expand the full tree, or \`product\` (e.g. "${product.toc.productExample}") to narrow to one component product._`;
 
         return {
           content: [
             {
               type: "text" as const,
-              text:
+              text: capText(
                 `${heading}\n\n` +
-                (body || `_No sections matched the given filters._`) +
-                hint,
+                  (body || `_No sections matched the given filters._`) +
+                  hint,
+                "`product` 로 구성 제품 하나를 고르거나 `section` 을 더 좁히세요."
+              ),
             },
           ],
         };

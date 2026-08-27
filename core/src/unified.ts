@@ -18,6 +18,7 @@ import {
   filterSections,
   pickByNameOrKey,
   renderGrouped,
+  capText,
 } from "./toc-view.js";
 
 /**
@@ -106,18 +107,7 @@ export function createUnifiedServer(products: ProductDefinition[]): McpServer {
 
   const text = (s: string) => ({ content: [{ type: "text" as const, text: s }] });
 
-  /**
-   * TOC 는 좁혀도 커질 수 있다. 클라이언트마다 툴 결과 크기 제한이 있고
-   * 넘기면 결과가 통째로 버려지므로, 넘칠 때는 잘라서라도 쓸 수 있게 돌려준다.
-   */
-  const TOC_MAX_CHARS = 24000;
-  const capped = (body: string, how: string) =>
-    body.length <= TOC_MAX_CHARS
-      ? text(body)
-      : text(
-          body.slice(0, TOC_MAX_CHARS) +
-            `\n\n_...잘렸습니다 (${body.length}자 중 ${TOC_MAX_CHARS}자). ${how}_`
-        );
+  const capped = (body: string, how: string) => text(capText(body, how));
   const fail = (s: string) => ({ ...text(s), isError: true });
 
   // ---------------------------------------------------------------- search
