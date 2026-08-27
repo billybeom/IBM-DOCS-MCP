@@ -219,11 +219,12 @@ export function createUnifiedServer(products: ProductDefinition[]): McpServer {
         : {}),
       component: z.string().optional().describe("Optional: for products made of several component products (e.g. 'iwhi', 'instana'), narrow to one component by name or key."),
       section: z.string().optional().describe("Optional: filter to a specific top-level section by label (e.g. 'Installing', 'Security')"),
+      depth: z.number().min(1).max(10).optional().describe("Optional: how many levels of the tree to show. Defaults to 1 (top-level only), or the whole tree when 'section' is given. Use this to step down a level at a time when a section is too large to return in full."),
       ...(langEnum ? { lang: langEnum.optional().default("en").describe(LANG_HINT) } : {}),
     } as ZodRawShape,
     async (args) => {
-      const { product, component, section, lang } = args as {
-        product?: string; component?: string; section?: string; lang?: string;
+      const { product, component, section, depth, lang } = args as {
+        product?: string; component?: string; section?: string; depth?: number; lang?: string;
       };
       try {
         const target = product ? byId.get(product) : multi ? undefined : products[0];
@@ -261,7 +262,8 @@ export function createUnifiedServer(products: ProductDefinition[]): McpServer {
 
         // 전체 트리를 펼치는 조건은 section 뿐이다. component 로만 좁혀도 펼치면
         // 구성 제품 하나가 5만자를 넘겨 클라이언트의 툴 결과 크기 제한에 걸린다.
-        const maxDepth = section ? Infinity : 1;
+        // 큰 섹션은 section 으로 더 좁힐 수 없으므로 depth 로 단계를 내려간다.
+        const maxDepth = depth ?? (section ? Infinity : 1);
         const heading = `# ${target.tocHeading} - Table of Contents`;
         const hint = section
           ? ""
@@ -273,7 +275,7 @@ export function createUnifiedServer(products: ProductDefinition[]): McpServer {
           const body = renderGrouped(results, section, maxDepth);
           return capped(
             `${heading}\n\n` + (body || "_No sections matched the given filters._") + hint,
-            "`component` 로 구성 제품 하나를 고르거나 `section` 을 더 좁히세요."
+            "`component` 로 구성 제품 하나를 고르거나, `depth` 를 낮추거나, `section` 을 더 좁히세요."
           );
         }
 
@@ -287,7 +289,7 @@ export function createUnifiedServer(products: ProductDefinition[]): McpServer {
         }
         return capped(
           `${heading}\n\n${formatToc(topics, maxDepth)}` + hint,
-          "`section` 을 더 좁히세요."
+          "`depth` 를 낮춰(예: 3) 단계적으로 내려가거나 `section` 을 더 좁히세요."
         );
       } catch (error) {
         return fail(`TOC error: ${error}`);

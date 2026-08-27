@@ -128,6 +128,14 @@ export function createServer(product: ProductDefinition): McpServer {
       ? { product: z.string().optional().describe(product.toc.productHint ?? "") }
       : {}),
     section: z.string().optional().describe(product.toc.sectionHint),
+    depth: z
+      .number()
+      .min(1)
+      .max(10)
+      .optional()
+      .describe(
+        "Optional: how many levels of the tree to show. Defaults to 1 (top-level only), or the whole tree when 'section' is given. Use this to step down a level at a time when a section is too large to return in full."
+      ),
     ...(langEnum
       ? { lang: langEnum.optional().default("en").describe(LANG_HINT) }
       : {}),
@@ -141,8 +149,14 @@ export function createServer(product: ProductDefinition): McpServer {
       const {
         product: productFilter,
         section,
+        depth,
         lang,
-      } = args as { product?: string; section?: string; lang?: string };
+      } = args as {
+        product?: string;
+        section?: string;
+        depth?: number;
+        lang?: string;
+      };
 
       try {
         let results = await fetchToc(product.components, lang);
@@ -178,18 +192,20 @@ export function createServer(product: ProductDefinition): McpServer {
 
         // 전체 트리를 펼치는 조건은 section 뿐이다. 구성 제품 하나로 좁혀도
         // 펼치면 5만자를 넘겨 클라이언트의 툴 결과 크기 제한에 걸린다.
-        const maxDepth = section ? Infinity : 1;
+        // 큰 섹션은 section 으로 더 좁힐 수 없으므로 depth 로 단계를 내려간다.
+        const maxDepth = depth ?? (section ? Infinity : 1);
 
-        function formatToc(items: TocItem[], depth = 0): string {
+        // 파라미터명은 level — 바깥의 depth(요청 인자)와 헷갈리지 않게.
+        function formatToc(items: TocItem[], level = 0): string {
           return items
             .map((item) => {
-              const indent = "  ".repeat(depth);
+              const indent = "  ".repeat(level);
               let line = `${indent}- ${item.label}`;
               if (item.href) line += ` [${item.href}]`;
               const kids = item.topics ?? [];
               if (kids.length > 0) {
-                if (depth + 1 < maxDepth) {
-                  line += "\n" + formatToc(kids, depth + 1);
+                if (level + 1 < maxDepth) {
+                  line += "\n" + formatToc(kids, level + 1);
                 } else {
                   line += ` _(+${kids.length} subtopics)_`;
                 }
@@ -235,7 +251,7 @@ export function createServer(product: ProductDefinition): McpServer {
                     (section
                       ? ""
                       : `\n\n_Showing top-level sections only. Pass \`section\` to expand the full tree._`),
-                  "`section` 을 더 좁히세요."
+                  "`depth` 를 낮춰(예: 3) 단계적으로 내려가거나 `section` 을 더 좁히세요."
                 ),
               },
             ],
@@ -265,7 +281,7 @@ export function createServer(product: ProductDefinition): McpServer {
                 `${heading}\n\n` +
                   (body || `_No sections matched the given filters._`) +
                   hint,
-                "`product` 로 구성 제품 하나를 고르거나 `section` 을 더 좁히세요."
+                "`product` 로 구성 제품 하나를 고르거나, `depth` 를 낮추거나, `section` 을 더 좁히세요."
               ),
             },
           ],
