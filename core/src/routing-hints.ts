@@ -19,6 +19,22 @@ export const BLURBS: Record<string, string> = {
   instana:
     "IBM Instana Observability — APM, 분산 트레이싱, Kubernetes 모니터링, alerting (SaaS / Self-Hosted 에디션)",
   concert: "IBM Concert 2.3.x — 애플리케이션 인벤토리, 리스크/컴플라이언스",
+  wminfra:
+    "IBM webMethods Infrastructure 12.1.0 — wM 제품군 공통 인프라. 설치, 설정, 클러스터링, 런타임 환경",
+  wminstaller:
+    "IBM webMethods Installer 12.1.0 — wM 제품 설치·업그레이드·패치·무인(silent) 설치 도구",
+  wmdesigner:
+    "IBM webMethods Designer 12.1.0 — IS/MSR 개발 IDE. Flow Service 편집기, 서비스 팔레트, 디버깅",
+  wmis:
+    "IBM webMethods Integration Server (IS) 12.1.0 — 통합 런타임. Flow Service, 어댑터, 트리거, JDBC, REST/SOAP API",
+  wmmsr:
+    "IBM webMethods Microservices Runtime (MSR) 12.1.0 — 컨테이너 기반 경량 IS. Docker, Kubernetes 배포",
+  wmcloudstreams:
+    "IBM webMethods CloudStreams 12.1.0 — SaaS/클라우드 연결. 클라우드 커넥터, OAuth, 가상 서비스",
+  wmum:
+    "IBM webMethods Universal Messaging (UM) 12.1.0 — 메시징 미들웨어. 채널, 큐, Publish-Subscribe, Realm Server",
+  wmbroker:
+    "IBM webMethods Broker 12.1.0 — 문서 기반 메시징 브로커. 문서 유형, 클라이언트 그룹, 영역(Territory)",
 };
 
 /**
@@ -32,6 +48,9 @@ export const OVERLAP_NOTES: string[] = [
   '"dpgw1100" 과 "idig" 는 둘 다 DataPower 지만 다른 제품입니다.',
   '"iwhi" 와 "activetransfer" 는 둘 다 webMethods 지만 다른 제품입니다. 파일 전송(MFT)이면 "activetransfer", 통합·API·B2B 쪽이면 "iwhi".',
   'API Connect 의 게이트웨이는 DataPower 이므로 OAuth·게이트웨이 주제는 "apic" 과 "dpgw1100" 양쪽에 존재합니다.',
+  '"wmis" 와 "wmmsr" 는 둘 다 Integration Server 계열이지만 다른 제품입니다. 전통적인 IS 런타임이면 "wmis", 컨테이너/경량 런타임이면 "wmmsr".',
+  '"wmum" 과 "wmbroker" 는 둘 다 메시징 제품이지만 다른 제품입니다. Universal Messaging(채널/큐)이면 "wmum", webMethods Broker(문서 유형 기반)이면 "wmbroker".',
+  '"wmis"/"wmmsr"/"wmum"/"wmbroker" 는 독립 문서 서버입니다. "iwhi" 에 번들된 Integration/API Gateway 문서와는 다릅니다.',
 ];
 
 /** product 파라미터 설명문을 조립한다. */
