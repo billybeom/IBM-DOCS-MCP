@@ -1,33 +1,63 @@
 [
   {
+    "product": "activetransfer",
+    "query": "Critical Information",
+    "href": "SSIGL3H_12.1.0/dita/critical-info.html"
+  },
+  {
+    "product": "activetransfer",
+    "query": "Accessing ActiveTransfer New User Interface",
+    "href": "SSIGL3H_12.1.0/ta-configuring_at.html"
+  },
+  {
+    "product": "activetransfer",
+    "query": "Adding a Virtual Folder",
+    "href": "SSIGL3H_12.1.0/ta-adding_folders.html"
+  },
+  {
+    "product": "activetransfer",
+    "query": "Send Email Task Configuration",
+    "href": "SSIGL3H_12.1.0/re-task_send_email.html"
+  },
+  {
+    "product": "activetransfer",
+    "query": "Adding a Template",
+    "href": "SSIGL3H_12.1.0/ta-adding_templates.html"
+  },
+  {
+    "product": "activetransfer",
+    "query": "Searching for Archived Data",
+    "href": "SSIGL3H_12.1.0/ta-search_archive_data.html"
+  },
+  {
     "product": "apic",
     "query": "Language versions offered by API Connect",
     "href": "SSMNED_12.1.x_cd/com.ibm.apic.overview.doc/g11n-langs-list.html"
   },
   {
     "product": "apic",
-    "query": "Management subsystem disaster recovery",
-    "href": "SSMNED_12.1.x_cd/com.ibm.apic.install.doc/mgmt_dr_ova.html"
+    "query": "Restoring the portal database backup",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.install.doc/bkup_vm_portal_restore.html"
   },
   {
     "product": "apic",
-    "query": "Custom HTTP header",
-    "href": "SSMNED_12.1.x_cd/com.ibm.apic.apistudio.doc/co_policy_routing_custom_http_header.html"
+    "query": "Conditional error processing",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.apistudio.doc/co-conditional_error_processing.html"
   },
   {
     "product": "apic",
-    "query": "Running Config Sync as a cronjob on Kubernetes",
-    "href": "SSMNED_12.1.x_cd/com.ibm.apic.apionprem.doc/apic_config_sync_cronjob_k8s.html"
+    "query": "Describing your policy",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.policy.doc/tapim_creating_policy.html"
   },
   {
     "product": "apic",
-    "query": "Analytics CLI",
-    "href": "SSMNED_12.1.x_cd/com.ibm.apic.analytics.doc/using_the_analytics_cli.html"
+    "query": "Running out of storage space",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.analytics.doc/running_out_of_storage_space.html"
   },
   {
     "product": "apic",
-    "query": "Exposing a SOAP API and GraphQL API to applications",
-    "href": "SSMNED_12.1.x_cd/com.ibm.apic.wmapigateway.doc/apigateway_ug/ta-apis_expose_soap.html"
+    "query": "Publishing APIs to Developer Portal",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.wmapigateway.doc/apigateway_ug/ta-api_publish_single.html"
   },
   {
     "product": "concert",
@@ -126,23 +156,23 @@
   },
   {
     "product": "idig",
-    "query": "Defining kinds",
-    "href": "SSP8GWM_12.1.1/com.ibm.apic.aigateway.doc/idig_studio/idig_stu_supported_kinds.html"
+    "query": "Importing existing files",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.aigateway.doc/idig_studio/idig_stu_import_api.html"
   },
   {
     "product": "idig",
-    "query": "Invoke Azure OpenAI Models ID",
-    "href": "SSP8GWM_12.1.1/com.ibm.apic.aigateway.doc/idig_studio/idig_nano_gw_invoke_azure_open_ai_models_id.html"
+    "query": "Invoke OpenAI Models ID",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.aigateway.doc/idig_studio/idig_nano_gw_invoke_open_ai_models_id.html"
   },
   {
     "product": "idig",
-    "query": "Specifying advanced security settings",
-    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/administration/ta-advanced_security_settings.html"
+    "query": "Securing communication between Developer Portal nodes in a cluster",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/administration/ta-secure_dpo_ignite.html"
   },
   {
     "product": "idig",
-    "query": "Assigning user privileges",
-    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/manage_users/ta-assign_privileges.html"
+    "query": "Adding user groups",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/manage_users/ta-add_group.html"
   },
   {
     "product": "idig",
@@ -186,27 +216,27 @@
   },
   {
     "product": "iwhi",
-    "query": "Understanding client connections",
-    "href": "SSGOVO/re-sap_erp_monitoring_sap__erp_connection_pool_client_connections.html"
+    "query": "Repository connection pools",
+    "href": "SSGOVO/re-sap_erp_monitoring_sap__erp_connection_pool_repository_connection_pools.html"
   },
   {
     "product": "iwhi",
-    "query": "Using query expressions for log search",
-    "href": "SSGOVO/ta-monitor_general_audit_logs_using_filters_in_audit_logs_supported_query_expressions.html"
+    "query": "Adding workflow alert rules",
+    "href": "SSGOVO/ta-monitor_alert_rules_workflow_alerts_adding_workflow_alert_rules.html"
   },
   {
     "product": "iwhi",
-    "query": "Viewing log messages in an external log viewer",
-    "href": "SSJ8I7/ace_ipaas/ipaas_logs_external.html"
+    "query": "Replaying recorded messages (record and replay)",
+    "href": "SSJ8I7/ace_ipaas/aas_record_replay.html"
   },
   {
     "product": "iwhi",
-    "query": "Deploying application to IBM Code Engine",
-    "href": "SSFQ7G1_12.1.0/com.ibm.apic.assistant.doc/deploying_code_engine.html"
+    "query": "List operations",
+    "href": "SSFQ7G1_12.1.0/com.ibm.apic.assistant.doc/list_assistant.html"
   },
   {
     "product": "iwhi",
-    "query": "Viewing provider list and provider configuration",
-    "href": "SSFQ7G1_12.1.0/com.ibm.apic.wmapigatewaysaas.doc/ag_sc_viewing_provider_list_configuration.html"
+    "query": "Modifying the provider configuration",
+    "href": "SSFQ7G1_12.1.0/com.ibm.apic.wmapigatewaysaas.doc/ag_sc_modifying_provider_configuration.html"
   }
 ]

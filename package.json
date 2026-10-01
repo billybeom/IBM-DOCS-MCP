@@ -7,6 +7,7 @@
   "type": "module",
   "workspaces": [
     "core",
+    "activetransfer-docs-mcp",
     "apic-docs-mcp",
     "concert-docs-mcp",
     "dpgw-11.0.0-docs-mcp",

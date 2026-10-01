@@ -4,6 +4,7 @@ https://github.com/Aiden-Kwak/IBM-DOCS-MCP 레파지토리 포크해서 개인�
 - IBM DataPower Interact Gateway 12.1.1
 - IBM API Connect for GraphQL Software 1.1.x
 - IBM DataPower Gateway 11.0.0
+- IBM webMethods ActiveTransfer 12.1.0
 
 > **Unofficial** - IBM과 공식적으로 관련 없는 커뮤니티 프로젝트입니다.
 
@@ -22,6 +23,7 @@ IBM Bob, Claude Code, Claude Desktop 등 MCP를 지원하는 AI 클라이언트�
 | [iwhi-docs-mcp](./iwhi-docs-mcp) | IBM webMethods Hybrid Integration (구성 제품 9종) | 1,100+ | `search_iwhi_docs`, `read_iwhi_doc`, `get_iwhi_toc` |
 | [instana-docs-mcp](./instana-docs-mcp) | IBM Instana Observability | 760+ | `search_instana_docs`, `read_instana_doc`, `get_instana_toc` |
 | [concert-docs-mcp](./concert-docs-mcp) | IBM Concert 2.3.x | 260+ | `search_concert_docs`, `read_concert_doc`, `get_concert_toc` |
+| [activetransfer-docs-mcp](./activetransfer-docs-mcp) | IBM webMethods ActiveTransfer 12.1.0 | 170+ | `search_activetransfer_docs`, `read_activetransfer_doc`, `get_activetransfer_toc` |
 
 각 서버는 3가지 공통 도구를 제공합니다:
 - **search** - 키워드로 문서 검색 (페이지네이션 지원)
@@ -30,7 +32,7 @@ IBM Bob, Claude Code, Claude Desktop 등 MCP를 지원하는 AI 클라이언트�
 
 ## Quick Start
 
-npm workspaces 단일 트리입니다. **루트에서 한 번** 설치/빌드하면 7개 서버가 모두 빌드됩니다.
+npm workspaces 단일 트리입니다. **루트에서 한 번** 설치/빌드하면 8개 서버가 모두 빌드됩니다.
 
 ```bash
 git clone https://github.com/billybeom/IBM-DOCS-MCP.git
@@ -45,7 +47,7 @@ npm run build
 |---|---|
 | `npm run build` | 변경된 패키지만 증분 빌드 (`tsc -b`) |
 | `npm run rebuild` | 전체 클린 후 재빌드 |
-| `npm run dump-tools` | 7개 서버를 띄워 `tools/list` 결과를 JSON 으로 출력 (변경 전후 비교용) |
+| `npm run dump-tools` | 8개 서버를 띄워 `tools/list` 결과를 JSON 으로 출력 (변경 전후 비교용) |
 
 특정 서버 하나만 빌드하려면 `cd apic-docs-mcp && npm run build` 도 됩니다 (공용 코어가 먼저 빌드됩니다).
 
@@ -69,7 +71,7 @@ IBM-DOCS-MCP/
 │       └── unified.ts          # 통합 서버 (툴 3개 + product 파라미터)
 ├── unified/src/index.ts        # 통합 서버 엔트리 (3줄)
 ├── apic-docs-mcp/src/index.ts  # 제품별 엔트리 (3줄)
-├── … 나머지 6개도 동일
+├── … 나머지 7개도 동일
 └── scripts/
     ├── dump-tools.mjs          # 툴 표면 덤프 (변경 전후 비교용)
     └── eval-routing.mjs        # 제품 라우팅 정확도 측정
@@ -98,12 +100,12 @@ IWHI 처럼 구성 제품이 여러개면 `components` 에 제품 키를 나열�
 
 ## 통합 서버 (권장)
 
-제품별 서버 7개 대신 **서버 하나 · 툴 3개**로 전 제품을 다룹니다. 제품은 툴 이름이 아니라 `product` 파라미터로 지정합니다.
+제품별 서버 8개 대신 **서버 하나 · 툴 3개**로 전 제품을 다룹니다. 제품은 툴 이름이 아니라 `product` 파라미터로 지정합니다.
 
 | | 제품별 서버 (레거시) | 통합 서버 |
 |---|---|---|
-| MCP 서버 항목 | 7개 | **1개** |
-| 툴 | 21개 (~3,360토큰) | **3개** |
+| MCP 서버 항목 | 8개 | **1개** |
+| 툴 | 24개 (~3,840토큰) | **3개** |
 | 제품 추가 시 | 폴더 + 설정 항목 추가 | `products.ts` 한 블록 |
 
 ```json
@@ -148,8 +150,8 @@ depth 3    3,456자        전체      68,438자  (24,000자에서 잘림)
 
 | | 결과 |
 |---|---|
-| 라우팅 모드 결과에 정답 제품 포함 | **100%** (42/42) |
-| 평균 제품 그룹 수 | 3.5개 |
+| 라우팅 모드 결과에 정답 제품 포함 | **100%** (48/48) |
+| 평균 제품 그룹 수 | 3.7개 |
 
 제품별 개별 검색을 여러 번 하는 방식(fan-out)도 시험했지만, **검색 1회를 제품별로 묶는 쪽이 요청 수는 1/6 이면서 정답 포함률은 더 높았습니다**.
 

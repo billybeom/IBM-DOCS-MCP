@@ -40,6 +40,40 @@ export interface ProductDefinition {
 }
 
 export const PRODUCTS = {
+  activetransfer: {
+    id: "activetransfer",
+    serverName: "activetransfer-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods ActiveTransfer Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods ActiveTransfer 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-activetransfer/12.1.0
+    components: [
+      { key: "SSIGL3H_12.1.0", label: "IBM webMethods ActiveTransfer" },
+    ],
+    search: {
+      toolName: "search_activetransfer_docs",
+      description:
+        "Search IBM webMethods ActiveTransfer 12.1.0 documentation (managed file transfer: Server, Gateway, Agent). Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'listener', 'virtual folder', 'scheduled transfer', 'SFTP')",
+    },
+    read: {
+      toolName: "read_activetransfer_doc",
+      description:
+        "Read a specific IBM webMethods ActiveTransfer documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSIGL3H_12.1.0/co-listeners.html', 'SSIGL3H_12.1.0/ta-adding_folders.html')",
+    },
+    toc: {
+      toolName: "get_activetransfer_toc",
+      description:
+        "Get the table of contents for IBM webMethods ActiveTransfer 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Using ActiveTransfer', 'Administering ActiveTransfer Server', 'Administering ActiveTransfer Gateway')",
+    },
+  },
+
   apic: {
     id: "apic",
     serverName: "apic-docs",

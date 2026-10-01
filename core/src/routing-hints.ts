@@ -14,6 +14,8 @@ export const BLURBS: Record<string, string> = {
     "IBM DataPower Gateway 11.0.0 — 게이트웨이 어플라이언스. MPGW, XSLT, GatewayScript, WebGUI/CLI 명령",
   idig: "IBM DataPower Interact Gateway 12.1.1 — DataPower Gateway 11.0.0 과 별개 제품군",
   iwhi: "IBM webMethods Hybrid Integration — webMethods Integration, App Connect, B2B, webMethods API Gateway, Developer Portal, Event Endpoint Management, 그리고 이 번들판 API Connect / API Connect for GraphQL",
+  activetransfer:
+    "IBM webMethods ActiveTransfer 12.1.0 — 관리형 파일 전송(MFT). ActiveTransfer Server/Gateway/Agent, 가상 폴더, 리스너(SFTP/FTPS/HTTPS), 스케줄 전송, 파트너 파일 교환",
   instana:
     "IBM Instana Observability — APM, 분산 트레이싱, Kubernetes 모니터링, alerting (SaaS / Self-Hosted 에디션)",
   concert: "IBM Concert 2.3.x — 애플리케이션 인벤토리, 리스크/컴플라이언스",
@@ -28,6 +30,7 @@ export const OVERLAP_NOTES: string[] = [
   '"apic" 과 "iwhi" 에 각각 다른 API Connect 가 있습니다. 독립 제품이면 "apic", webMethods Hybrid Integration 번들이면 "iwhi".',
   '"graphql" 과 "iwhi" 에 각각 다른 API Connect for GraphQL 이 있습니다. 자체 관리형이면 "graphql", 번들/SaaS 면 "iwhi".',
   '"dpgw1100" 과 "idig" 는 둘 다 DataPower 지만 다른 제품입니다.',
+  '"iwhi" 와 "activetransfer" 는 둘 다 webMethods 지만 다른 제품입니다. 파일 전송(MFT)이면 "activetransfer", 통합·API·B2B 쪽이면 "iwhi".',
   'API Connect 의 게이트웨이는 DataPower 이므로 OAuth·게이트웨이 주제는 "apic" 과 "dpgw1100" 양쪽에 존재합니다.',
 ];
 
