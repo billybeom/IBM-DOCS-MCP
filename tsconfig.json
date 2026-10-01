@@ -29,6 +29,30 @@
       "path": "iwhi-docs-mcp"
     },
     {
+      "path": "wminfra-docs-mcp"
+    },
+    {
+      "path": "wminstaller-docs-mcp"
+    },
+    {
+      "path": "wmdesigner-docs-mcp"
+    },
+    {
+      "path": "wmis-docs-mcp"
+    },
+    {
+      "path": "wmmsr-docs-mcp"
+    },
+    {
+      "path": "wmcloudstreams-docs-mcp"
+    },
+    {
+      "path": "wmum-docs-mcp"
+    },
+    {
+      "path": "wmbroker-docs-mcp"
+    },
+    {
       "path": "unified"
     }
   ]

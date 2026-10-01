@@ -308,6 +308,277 @@ export const PRODUCTS = {
       productExample: "App Connect",
     },
   },
+  wminfra: {
+    id: "wminfra",
+    serverName: "wminfra-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Infrastructure 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Infrastructure 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-integration/wm-infrastructure/12.1.0
+    components: [
+      { key: "SSDZDB_12.1.0", label: "IBM webMethods Infrastructure" },
+    ],
+    search: {
+      toolName: "search_wminfra_docs",
+      description:
+        "Search IBM webMethods Infrastructure 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'installation', 'configuration', 'runtime', 'clustering')",
+    },
+    read: {
+      toolName: "read_wminfra_doc",
+      description:
+        "Read a specific IBM webMethods Infrastructure 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSDZDB_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wminfra_toc",
+      description:
+        "Get the table of contents for IBM webMethods Infrastructure 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Configuring')",
+    },
+  },
+
+  wminstaller: {
+    id: "wminstaller",
+    serverName: "wminstaller-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Installer 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Installer 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-integration/webmethods-installer/12.1.0
+    components: [
+      { key: "SSE9VGQ_12.1.0", label: "IBM webMethods Installer" },
+    ],
+    search: {
+      toolName: "search_wminstaller_docs",
+      description:
+        "Search IBM webMethods Installer 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'install', 'upgrade', 'patch', 'silent installation')",
+    },
+    read: {
+      toolName: "read_wminstaller_doc",
+      description:
+        "Read a specific IBM webMethods Installer 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSE9VGQ_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wminstaller_toc",
+      description:
+        "Get the table of contents for IBM webMethods Installer 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Upgrading', 'Uninstalling')",
+    },
+  },
+
+  wmdesigner: {
+    id: "wmdesigner",
+    serverName: "wmdesigner-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Designer 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Designer 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-integration/wm-designer/12.1.0
+    components: [
+      { key: "SSFTR88_12.1.0", label: "IBM webMethods Designer" },
+    ],
+    search: {
+      toolName: "search_wmdesigner_docs",
+      description:
+        "Search IBM webMethods Designer 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'flow service', 'service editor', 'debugging', 'palette')",
+    },
+    read: {
+      toolName: "read_wmdesigner_doc",
+      description:
+        "Read a specific IBM webMethods Designer 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSFTR88_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmdesigner_toc",
+      description:
+        "Get the table of contents for IBM webMethods Designer 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Getting Started', 'Developing', 'Debugging')",
+    },
+  },
+
+  wmis: {
+    id: "wmis",
+    serverName: "wmis-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Integration Server 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Integration Server 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0
+    components: [
+      { key: "SSL8N8_12.1.0", label: "IBM webMethods Integration Server" },
+    ],
+    search: {
+      toolName: "search_wmis_docs",
+      description:
+        "Search IBM webMethods Integration Server (IS) 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'flow service', 'adapter', 'trigger', 'JDBC', 'REST API')",
+    },
+    read: {
+      toolName: "read_wmis_doc",
+      description:
+        "Read a specific IBM webMethods Integration Server 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSL8N8_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmis_toc",
+      description:
+        "Get the table of contents for IBM webMethods Integration Server 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Administering', 'Developing', 'Security')",
+    },
+  },
+
+  wmmsr: {
+    id: "wmmsr",
+    serverName: "wmmsr-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Microservices Runtime 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Microservices Runtime 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-integration/wm-microservices-runtime/12.1.0
+    components: [
+      { key: "SSIL0VK_12.1.0", label: "IBM webMethods Microservices Runtime" },
+    ],
+    search: {
+      toolName: "search_wmmsr_docs",
+      description:
+        "Search IBM webMethods Microservices Runtime (MSR) 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'microservice', 'container', 'Docker', 'Kubernetes', 'REST')",
+    },
+    read: {
+      toolName: "read_wmmsr_doc",
+      description:
+        "Read a specific IBM webMethods Microservices Runtime 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSIL0VK_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmmsr_toc",
+      description:
+        "Get the table of contents for IBM webMethods Microservices Runtime 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Deploying', 'Administering')",
+    },
+  },
+
+  wmcloudstreams: {
+    id: "wmcloudstreams",
+    serverName: "wmcloudstreams-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods CloudStreams 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods CloudStreams 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-integration/webmethods-cloudstreams/12.1.0
+    components: [
+      { key: "SSMAZ29_12.1.0", label: "IBM webMethods CloudStreams" },
+    ],
+    search: {
+      toolName: "search_wmcloudstreams_docs",
+      description:
+        "Search IBM webMethods CloudStreams 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'cloud connector', 'SaaS', 'OAuth', 'provider', 'virtual service')",
+    },
+    read: {
+      toolName: "read_wmcloudstreams_doc",
+      description:
+        "Read a specific IBM webMethods CloudStreams 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSMAZ29_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmcloudstreams_toc",
+      description:
+        "Get the table of contents for IBM webMethods CloudStreams 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Getting Started', 'Administering', 'Developing')",
+    },
+  },
+
+  wmum: {
+    id: "wmum",
+    serverName: "wmum-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Universal Messaging 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Universal Messaging 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-integration/wm-universal-messaging/12.1.0
+    components: [
+      { key: "SSEUZ5Z_12.1.0", label: "IBM webMethods Universal Messaging" },
+    ],
+    search: {
+      toolName: "search_wmum_docs",
+      description:
+        "Search IBM webMethods Universal Messaging (UM) 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'messaging', 'channel', 'queue', 'publish subscribe', 'realm server')",
+    },
+    read: {
+      toolName: "read_wmum_doc",
+      description:
+        "Read a specific IBM webMethods Universal Messaging 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSEUZ5Z_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmum_toc",
+      description:
+        "Get the table of contents for IBM webMethods Universal Messaging 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Developing')",
+    },
+  },
+
+  wmbroker: {
+    id: "wmbroker",
+    serverName: "wmbroker-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Broker 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Broker 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-integration/webmethods-broker/12.1.0
+    components: [
+      { key: "SSHB271_12.1.0", label: "IBM webMethods Broker" },
+    ],
+    search: {
+      toolName: "search_wmbroker_docs",
+      description:
+        "Search IBM webMethods Broker 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'broker', 'document type', 'client group', 'territory', 'publish subscribe')",
+    },
+    read: {
+      toolName: "read_wmbroker_doc",
+      description:
+        "Read a specific IBM webMethods Broker 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSHB271_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmbroker_toc",
+      description:
+        "Get the table of contents for IBM webMethods Broker 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Developing')",
+    },
+  },
 } satisfies Record<string, ProductDefinition>;
 
 export type ProductId = keyof typeof PRODUCTS;

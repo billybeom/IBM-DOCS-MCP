@@ -15,6 +15,14 @@
     "idig-docs-mcp",
     "instana-docs-mcp",
     "iwhi-docs-mcp",
+    "wminfra-docs-mcp",
+    "wminstaller-docs-mcp",
+    "wmdesigner-docs-mcp",
+    "wmis-docs-mcp",
+    "wmmsr-docs-mcp",
+    "wmcloudstreams-docs-mcp",
+    "wmum-docs-mcp",
+    "wmbroker-docs-mcp",
     "unified"
   ],
   "scripts": {
