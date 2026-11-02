@@ -1,11 +1,10 @@
 # ibm-docs-mcp
 
 https://github.com/Aiden-Kwak/IBM-DOCS-MCP 레파지토리 포크해서 개인적으로 필요한 IBM 제품 Document 추가합니다.
-- IBM DataPower Interact Gateway 12.1.1
-- IBM API Connect for GraphQL Software 1.1.x
-- IBM DataPower Gateway 11.0.0
-- IBM webMethods ActiveTransfer 12.1.0
-- IBM webMethods Infrastructure / Installer / Designer / Integration Server / Microservices Runtime / CloudStreams / Universal Messaging / Broker 12.1.0
+- IBM API Connect / DataPower / Instana / Concert / webMethods 제품군
+- IBM Aspera 제품군 (17종)
+- IBM App Connect Enterprise / Integration Bus
+- IBM MQ 제품군 (4종)
 
 > **Unofficial** - IBM과 공식적으로 관련 없는 커뮤니티 프로젝트입니다.
 
@@ -15,29 +14,105 @@ IBM Bob, Claude Code, Claude Desktop 등 MCP를 지원하는 AI 클라이언트�
 
 ## MCP Servers
 
-| Server | Product | Docs | Tools |
-|--------|---------|------|-------|
-| [apic-docs-mcp](./apic-docs-mcp) | IBM API Connect 12.1.x | 1,600+ | `search_apic_docs`, `read_apic_doc`, `get_apic_toc` |
-| [idig-docs-mcp](./idig-docs-mcp) | IBM DataPower Interact Gateway 12.1.1 | 185+ | `search_idig_docs`, `read_idig_doc`, `get_idig_toc` |
-| [dpgw-11.0.0-docs-mcp](./dpgw-11.0.0-docs-mcp) | IBM DataPower Gateway 11.0.0 | 1,600+ | `search_dpgw1100_docs`, `read_dpgw1100_doc`, `get_dpgw1100_toc` |
-| [graphql-docs-mcp](./graphql-docs-mcp) | IBM API Connect for GraphQL Software 1.x | 75+ | `search_graphql_docs`, `read_graphql_doc`, `get_graphql_toc` |
-| [iwhi-docs-mcp](./iwhi-docs-mcp) | IBM webMethods Hybrid Integration (구성 제품 9종) | 1,100+ | `search_iwhi_docs`, `read_iwhi_doc`, `get_iwhi_toc` |
-| [instana-docs-mcp](./instana-docs-mcp) | IBM Instana Observability | 760+ | `search_instana_docs`, `read_instana_doc`, `get_instana_toc` |
-| [concert-docs-mcp](./concert-docs-mcp) | IBM Concert 2.3.x | 260+ | `search_concert_docs`, `read_concert_doc`, `get_concert_toc` |
-| [activetransfer-docs-mcp](./activetransfer-docs-mcp) | IBM webMethods ActiveTransfer 12.1.0 | 170+ | `search_activetransfer_docs`, `read_activetransfer_doc`, `get_activetransfer_toc` |
-| [wminfra-docs-mcp](./wminfra-docs-mcp) | IBM webMethods Infrastructure 12.1.0 | — | `search_wminfra_docs`, `read_wminfra_doc`, `get_wminfra_toc` |
-| [wminstaller-docs-mcp](./wminstaller-docs-mcp) | IBM webMethods Installer 12.1.0 | — | `search_wminstaller_docs`, `read_wminstaller_doc`, `get_wminstaller_toc` |
-| [wmdesigner-docs-mcp](./wmdesigner-docs-mcp) | IBM webMethods Designer 12.1.0 | — | `search_wmdesigner_docs`, `read_wmdesigner_doc`, `get_wmdesigner_toc` |
-| [wmis-docs-mcp](./wmis-docs-mcp) | IBM webMethods Integration Server 12.1.0 | — | `search_wmis_docs`, `read_wmis_doc`, `get_wmis_toc` |
-| [wmmsr-docs-mcp](./wmmsr-docs-mcp) | IBM webMethods Microservices Runtime 12.1.0 | — | `search_wmmsr_docs`, `read_wmmsr_doc`, `get_wmmsr_toc` |
-| [wmcloudstreams-docs-mcp](./wmcloudstreams-docs-mcp) | IBM webMethods CloudStreams 12.1.0 | — | `search_wmcloudstreams_docs`, `read_wmcloudstreams_doc`, `get_wmcloudstreams_toc` |
-| [wmum-docs-mcp](./wmum-docs-mcp) | IBM webMethods Universal Messaging 12.1.0 | — | `search_wmum_docs`, `read_wmum_doc`, `get_wmum_toc` |
-| [wmbroker-docs-mcp](./wmbroker-docs-mcp) | IBM webMethods Broker 12.1.0 | — | `search_wmbroker_docs`, `read_wmbroker_doc`, `get_wmbroker_toc` |
+총 **51개** 개별 서버 + **1개** 통합 서버(`unified`). 각 서버는 `search`, `read`, `toc` 3개 도구를 제공합니다.
+
+### API Connect / DataPower
+
+| Server | Product | Tools |
+|--------|---------|-------|
+| [apic-docs-mcp](./apic-docs-mcp) | IBM API Connect 12.1.x | `search_apic_docs`, `read_apic_doc`, `get_apic_toc` |
+| [idig-docs-mcp](./idig-docs-mcp) | IBM DataPower Interact Gateway 12.1.1 | `search_idig_docs`, `read_idig_doc`, `get_idig_toc` |
+| [dpgw-11.0.0-docs-mcp](./dpgw-11.0.0-docs-mcp) | IBM DataPower Gateway 11.0.0 | `search_dpgw1100_docs`, `read_dpgw1100_doc`, `get_dpgw1100_toc` |
+| [graphql-docs-mcp](./graphql-docs-mcp) | IBM API Connect for GraphQL Software 1.1.x | `search_graphql_docs`, `read_graphql_doc`, `get_graphql_toc` |
+
+### Instana / Concert
+
+| Server | Product | Tools |
+|--------|---------|-------|
+| [instana-docs-mcp](./instana-docs-mcp) | IBM Instana Observability | `search_instana_docs`, `read_instana_doc`, `get_instana_toc` |
+| [concert-docs-mcp](./concert-docs-mcp) | IBM Concert 2.3.x | `search_concert_docs`, `read_concert_doc`, `get_concert_toc` |
+
+### App Connect / Integration Bus
+
+| Server | Product | Tools |
+|--------|---------|-------|
+| [ace-docs-mcp](./ace-docs-mcp) | IBM App Connect Enterprise 13.0 | `search_ace_docs`, `read_ace_doc`, `get_ace_toc` |
+| [iib-docs-mcp](./iib-docs-mcp) | IBM Integration Bus 10.1.0 | `search_iib_docs`, `read_iib_doc`, `get_iib_toc` |
+
+### webMethods Hybrid Integration
+
+| Server | Product | Tools |
+|--------|---------|-------|
+| [iwhi-docs-mcp](./iwhi-docs-mcp) | IBM webMethods Hybrid Integration (구성 제품 9종) | `search_iwhi_docs`, `read_iwhi_doc`, `get_iwhi_toc` |
+
+### webMethods 개별 제품
+
+| Server | Product | Tools |
+|--------|---------|-------|
+| [activetransfer-docs-mcp](./activetransfer-docs-mcp) | IBM webMethods ActiveTransfer 12.1.0 | `search_activetransfer_docs`, `read_activetransfer_doc`, `get_activetransfer_toc` |
+| [wminfra-docs-mcp](./wminfra-docs-mcp) | IBM webMethods Infrastructure 12.1.0 | `search_wminfra_docs`, `read_wminfra_doc`, `get_wminfra_toc` |
+| [wminstaller-docs-mcp](./wminstaller-docs-mcp) | IBM webMethods Installer 12.1.0 | `search_wminstaller_docs`, `read_wminstaller_doc`, `get_wminstaller_toc` |
+| [wmdesigner-docs-mcp](./wmdesigner-docs-mcp) | IBM webMethods Designer 12.1.0 | `search_wmdesigner_docs`, `read_wmdesigner_doc`, `get_wmdesigner_toc` |
+| [wmis-docs-mcp](./wmis-docs-mcp) | IBM webMethods Integration Server 12.1.0 | `search_wmis_docs`, `read_wmis_doc`, `get_wmis_toc` |
+| [wmmsr-docs-mcp](./wmmsr-docs-mcp) | IBM webMethods Microservices Runtime 12.1.0 | `search_wmmsr_docs`, `read_wmmsr_doc`, `get_wmmsr_toc` |
+| [wmcloudstreams-docs-mcp](./wmcloudstreams-docs-mcp) | IBM webMethods CloudStreams 12.1.0 | `search_wmcloudstreams_docs`, `read_wmcloudstreams_doc`, `get_wmcloudstreams_toc` |
+| [wmum-docs-mcp](./wmum-docs-mcp) | IBM webMethods Universal Messaging 12.1.0 | `search_wmum_docs`, `read_wmum_doc`, `get_wmum_toc` |
+| [wmbroker-docs-mcp](./wmbroker-docs-mcp) | IBM webMethods Broker 12.1.0 | `search_wmbroker_docs`, `read_wmbroker_doc`, `get_wmbroker_toc` |
+| [wmmywebmethods-docs-mcp](./wmmywebmethods-docs-mcp) | IBM My webMethods Server 12.1.0 | `search_wmmywebmethods_docs`, `read_wmmywebmethods_doc`, `get_wmmywebmethods_toc` |
+| [wmmonitor-docs-mcp](./wmmonitor-docs-mcp) | IBM webMethods Monitor 12.1.0 | `search_wmmonitor_docs`, `read_wmmonitor_doc`, `get_wmmonitor_toc` |
+| [wmupdatemgr-docs-mcp](./wmupdatemgr-docs-mcp) | IBM webMethods Update Manager 12.0.0 | `search_wmupdatemgr_docs`, `read_wmupdatemgr_doc`, `get_wmupdatemgr_toc` |
+| [wmadapters-docs-mcp](./wmadapters-docs-mcp) | IBM webMethods Adapters | `search_wmadapters_docs`, `read_wmadapters_doc`, `get_wmadapters_toc` |
+| [wmdeployer-docs-mcp](./wmdeployer-docs-mcp) | IBM webMethods Deployer 12.1.0 | `search_wmdeployer_docs`, `read_wmdeployer_doc`, `get_wmdeployer_toc` |
+| [wmcommandcentral-docs-mcp](./wmcommandcentral-docs-mcp) | IBM webMethods Command Central 12.1.0 | `search_wmcommandcentral_docs`, `read_wmcommandcentral_doc`, `get_wmcommandcentral_toc` |
+| [wmb2btrading-docs-mcp](./wmb2btrading-docs-mcp) | IBM webMethods B2B Trading Networks 12.1.0 | `search_wmb2btrading_docs`, `read_wmb2btrading_doc`, `get_wmb2btrading_toc` |
+| [wmestandards-docs-mcp](./wmestandards-docs-mcp) | IBM webMethods eStandards | `search_wmestandards_docs`, `read_wmestandards_doc`, `get_wmestandards_toc` |
+| [wmpkgregistry-docs-mcp](./wmpkgregistry-docs-mcp) | IBM webMethods Package Registry (SaaS) | `search_wmpkgregistry_docs`, `read_wmpkgregistry_doc`, `get_wmpkgregistry_toc` |
+| [wme2emonitoring-docs-mcp](./wme2emonitoring-docs-mcp) | IBM webMethods End-to-End Monitoring (SaaS) | `search_wme2emonitoring_docs`, `read_wme2emonitoring_doc`, `get_wme2emonitoring_toc` |
+
+### IBM Aspera
+
+| Server | Product | Tools |
+|--------|---------|-------|
+| [aspera-docs-mcp](./aspera-docs-mcp) | IBM Aspera 1.1.x | `search_aspera_docs`, `read_aspera_doc`, `get_aspera_toc` |
+| [asperacargo-docs-mcp](./asperacargo-docs-mcp) | IBM Aspera Cargo 4.2 | `search_asperacargo_docs`, `read_asperacargo_doc`, `get_asperacargo_toc` |
+| [asperaconnect-docs-mcp](./asperaconnect-docs-mcp) | IBM Aspera Connect 4.2 | `search_asperaconnect_docs`, `read_asperaconnect_doc`, `get_asperaconnect_toc` |
+| [asperaconsole-docs-mcp](./asperaconsole-docs-mcp) | IBM Aspera Console 3.4 | `search_asperaconsole_docs`, `read_asperaconsole_doc`, `get_asperaconsole_toc` |
+| [asperade-docs-mcp](./asperade-docs-mcp) | Aspera Desktop Client 4.4 | `search_asperade_docs`, `read_asperade_doc`, `get_asperade_toc` |
+| [asperawebapps-docs-mcp](./asperawebapps-docs-mcp) | IBM Aspera Enterprise WebApps | `search_asperawebapps_docs`, `read_asperawebapps_doc`, `get_asperawebapps_toc` |
+| [asperafasp-docs-mcp](./asperafasp-docs-mcp) | Aspera FASP Proxy 1.4 | `search_asperafasp_docs`, `read_asperafasp_doc`, `get_asperafasp_toc` |
+| [asperafaspex-docs-mcp](./asperafaspex-docs-mcp) | IBM Aspera Faspex 5.0 | `search_asperafaspex_docs`, `read_asperafaspex_doc`, `get_asperafaspex_toc` |
+| [asperafaspio-docs-mcp](./asperafaspio-docs-mcp) | IBM Aspera faspio 1.3 | `search_asperafaspio_docs`, `read_asperafaspio_doc`, `get_asperafaspio_toc` |
+| [asperahste-docs-mcp](./asperahste-docs-mcp) | IBM Aspera High-Speed Transfer Endpoint (HSTE) 4.4 | `search_asperahste_docs`, `read_asperahste_doc`, `get_asperahste_toc` |
+| [asperahsts-docs-mcp](./asperahsts-docs-mcp) | IBM Aspera High-Speed Transfer Server (HSTS) 4.4 | `search_asperahsts_docs`, `read_asperahsts_doc`, `get_asperahsts_toc` |
+| [asperalite-docs-mcp](./asperalite-docs-mcp) | IBM Aspera Lite | `search_asperalite_docs`, `read_asperalite_doc`, `get_asperalite_toc` |
+| [asperaoc-docs-mcp](./asperaoc-docs-mcp) | IBM Aspera On Cloud | `search_asperaoc_docs`, `read_asperaoc_doc`, `get_asperaoc_toc` |
+| [asperaorch-docs-mcp](./asperaorch-docs-mcp) | IBM Aspera Orchestrator 4.1.0 | `search_asperaorch_docs`, `read_asperaorch_doc`, `get_asperaorch_toc` |
+| [asperaproxy-docs-mcp](./asperaproxy-docs-mcp) | IBM Aspera Proxy Gateway 2.3 | `search_asperaproxy_docs`, `read_asperaproxy_doc`, `get_asperaproxy_toc` |
+| [asperashares-docs-mcp](./asperashares-docs-mcp) | IBM Aspera Shares 1.11.0 | `search_asperashares_docs`, `read_asperashares_doc`, `get_asperashares_toc` |
+| [asperavalidator-docs-mcp](./asperavalidator-docs-mcp) | IBM Aspera Validator 1.0 | `search_asperavalidator_docs`, `read_asperavalidator_doc`, `get_asperavalidator_toc` |
+
+### IBM MQ
+
+| Server | Product | Tools |
+|--------|---------|-------|
+| [ibmmq-docs-mcp](./ibmmq-docs-mcp) | IBM MQ 10.0.0 | `search_ibmmq_docs`, `read_ibmmq_doc`, `get_ibmmq_toc` |
+| [ibmmqappliance-docs-mcp](./ibmmqappliance-docs-mcp) | IBM MQ Appliance 10.0.0 | `search_ibmmqappliance_docs`, `read_ibmmqappliance_doc`, `get_ibmmqappliance_toc` |
+| [ibmmqaas-docs-mcp](./ibmmqaas-docs-mcp) | IBM MQ as a Service | `search_ibmmqaas_docs`, `read_ibmmqaas_doc`, `get_ibmmqaas_toc` |
+| [ibmmqhpe-docs-mcp](./ibmmqhpe-docs-mcp) | IBM MQ for HPE NonStop 8.1.0 | `search_ibmmqhpe_docs`, `read_ibmmqhpe_doc`, `get_ibmmqhpe_toc` |
+
+### BigMemory / Terracotta
+
+| Server | Product | Tools |
+|--------|---------|-------|
+| [bigmemorymax-docs-mcp](./bigmemorymax-docs-mcp) | IBM BigMemory Max 4.5.1 | `search_bigmemorymax_docs`, `read_bigmemorymax_doc`, `get_bigmemorymax_toc` |
+| [terracotta-docs-mcp](./terracotta-docs-mcp) | IBM Terracotta 12.1.0 | `search_terracotta_docs`, `read_terracotta_doc`, `get_terracotta_toc` |
 
 각 서버는 3가지 공통 도구를 제공합니다:
 - **search** - 키워드로 문서 검색 (페이지네이션 지원)
 - **read** - 특정 문서 페이지를 Markdown으로 조회
 - **toc** - 전체 목차(TOC) 구조 조회 (섹션 필터 가능)
+
+> 개별 서버를 모두 등록하는 대신 **[통합 서버(unified)](#통합-서버-권장)** 하나로 전 제품을 다루는 것을 권장합니다.
 
 ## Quick Start
 
@@ -130,8 +205,8 @@ IWHI 처럼 구성 제품이 여러개면 `components` 에 제품 키를 나열�
 
 | | 제품별 서버 (레거시) | 통합 서버 |
 |---|---|---|
-| MCP 서버 항목 | 16개 | **1개** |
-| 툴 | 48개 (~7,680토큰) | **3개** |
+| MCP 서버 항목 | 51개 | **1개** |
+| 툴 | 153개 (~24,480토큰) | **3개** |
 | 제품 추가 시 | 폴더 + 설정 항목 추가 | `products.ts` 한 블록 |
 
 ```json
