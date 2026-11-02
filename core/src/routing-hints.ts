@@ -35,6 +35,30 @@ export const BLURBS: Record<string, string> = {
     "IBM webMethods Universal Messaging (UM) 12.1.0 — 메시징 미들웨어. 채널, 큐, Publish-Subscribe, Realm Server",
   wmbroker:
     "IBM webMethods Broker 12.1.0 — 문서 기반 메시징 브로커. 문서 유형, 클라이언트 그룹, 영역(Territory)",
+  wmmywebmethods:
+    "IBM My webMethods Server 12.1.0 — 포털 기반 BPM/작업 관리. 대시보드, Task, 비즈니스 프로세스, 사용자 관리",
+  wmmonitor:
+    "IBM webMethods Monitor 12.1.0 — 프로세스 및 서비스 모니터링. 실행 로그, 오류 추적, 알림",
+  wmupdatemgr:
+    "IBM webMethods Update Manager 12.0.0 — 제품 업데이트·픽스·롤백 관리 도구",
+  wmadapters:
+    "IBM webMethods Adapters — IS/MSR용 어댑터 모음. JDBC, SAP, Salesforce, JMS 등 외부 시스템 연결",
+  wmdeployer:
+    "IBM webMethods Deployer 12.1.0 — 통합 런타임 배포 자동화. 프로젝트, 후보, 저장소, 배포 계획",
+  wmcommandcentral:
+    "IBM webMethods Command Central 12.1.0 — 제품 수명 주기 관리. Platform Manager, 템플릿, 프로비저닝",
+  bigmemorymax:
+    "IBM BigMemory Max 4.5.1 — 대용량 인메모리 데이터 관리. Ehcache 기반 분산 캐시",
+  terracotta:
+    "IBM Terracotta 12.1.0 — 분산 인메모리 클러스터링. Ehcache, 세션 관리, 고가용성",
+  wmb2btrading:
+    "IBM webMethods B2B Trading Networks 12.1.0 — B2B 거래 네트워크. 거래 파트너, EDI, 문서 교환, 라우팅",
+  wmestandards:
+    "IBM webMethods eStandards — B2B 전자표준 모듈. EDIFACT, X12, HL7, RosettaNet 스키마",
+  wmpkgregistry:
+    "IBM webMethods Package Registry (SaaS) — 통합 패키지 레지스트리. 아티팩트 게시 및 관리",
+  wme2emonitoring:
+    "IBM webMethods End-to-End Monitoring (SaaS) — 통합 E2E 모니터링. 트랜잭션 추적, 대시보드, 알림(SaaS)",
 };
 
 /**

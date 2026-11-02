@@ -53,6 +53,42 @@
       "path": "wmbroker-docs-mcp"
     },
     {
+      "path": "wmmywebmethods-docs-mcp"
+    },
+    {
+      "path": "wmmonitor-docs-mcp"
+    },
+    {
+      "path": "wmupdatemgr-docs-mcp"
+    },
+    {
+      "path": "wmadapters-docs-mcp"
+    },
+    {
+      "path": "wmdeployer-docs-mcp"
+    },
+    {
+      "path": "wmcommandcentral-docs-mcp"
+    },
+    {
+      "path": "bigmemorymax-docs-mcp"
+    },
+    {
+      "path": "terracotta-docs-mcp"
+    },
+    {
+      "path": "wmb2btrading-docs-mcp"
+    },
+    {
+      "path": "wmestandards-docs-mcp"
+    },
+    {
+      "path": "wmpkgregistry-docs-mcp"
+    },
+    {
+      "path": "wme2emonitoring-docs-mcp"
+    },
+    {
       "path": "unified"
     }
   ]

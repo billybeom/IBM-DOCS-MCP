@@ -579,6 +579,413 @@ export const PRODUCTS = {
         "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Developing')",
     },
   },
+  wmmywebmethods: {
+    id: "wmmywebmethods",
+    serverName: "wmmywebmethods-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM My webMethods Server 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM My webMethods Server 12.1.0",
+    // https://www.ibm.com/docs/en/my-webmethods-server/12.1.0
+    components: [
+      { key: "SSJ2E9_12.1.0", label: "IBM My webMethods Server" },
+    ],
+    search: {
+      toolName: "search_wmmywebmethods_docs",
+      description:
+        "Search IBM My webMethods Server 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'portal', 'task', 'dashboard', 'business process', 'user management')",
+    },
+    read: {
+      toolName: "read_wmmywebmethods_doc",
+      description:
+        "Read a specific IBM My webMethods Server 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSJ2E9_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmmywebmethods_toc",
+      description:
+        "Get the table of contents for IBM My webMethods Server 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Administering', 'Developing', 'Using')",
+    },
+  },
+
+  wmmonitor: {
+    id: "wmmonitor",
+    serverName: "wmmonitor-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Monitor 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Monitor 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-monitor/12.1.0
+    components: [
+      { key: "SSNGGZ_12.1.0", label: "IBM webMethods Monitor" },
+    ],
+    search: {
+      toolName: "search_wmmonitor_docs",
+      description:
+        "Search IBM webMethods Monitor 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'monitoring', 'process', 'service', 'log', 'alert')",
+    },
+    read: {
+      toolName: "read_wmmonitor_doc",
+      description:
+        "Read a specific IBM webMethods Monitor 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSNGGZ_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmmonitor_toc",
+      description:
+        "Get the table of contents for IBM webMethods Monitor 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Administering', 'Monitoring', 'Configuring')",
+    },
+  },
+
+  wmupdatemgr: {
+    id: "wmupdatemgr",
+    serverName: "wmupdatemgr-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Update Manager 12.0.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Update Manager 12.0.0",
+    // https://www.ibm.com/docs/en/webmethods-update-manager/12.0.0
+    components: [
+      { key: "SSMXB5L_12.0.0", label: "IBM webMethods Update Manager" },
+    ],
+    search: {
+      toolName: "search_wmupdatemgr_docs",
+      description:
+        "Search IBM webMethods Update Manager 12.0.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'update', 'patch', 'fix', 'rollback', 'release')",
+    },
+    read: {
+      toolName: "read_wmupdatemgr_doc",
+      description:
+        "Read a specific IBM webMethods Update Manager 12.0.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSMXB5L_12.0.0/...')",
+    },
+    toc: {
+      toolName: "get_wmupdatemgr_toc",
+      description:
+        "Get the table of contents for IBM webMethods Update Manager 12.0.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Updating', 'Uninstalling')",
+    },
+  },
+
+  wmadapters: {
+    id: "wmadapters",
+    serverName: "wmadapters-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Adapters Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Adapters",
+    // https://www.ibm.com/docs/en/webmethods-adapters
+    components: [
+      { key: "SSUKUZG", label: "IBM webMethods Adapters" },
+    ],
+    search: {
+      toolName: "search_wmadapters_docs",
+      description:
+        "Search IBM webMethods Adapters documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'adapter', 'JDBC', 'SAP', 'Salesforce', 'connection')",
+    },
+    read: {
+      toolName: "read_wmadapters_doc",
+      description:
+        "Read a specific IBM webMethods Adapters documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSUKUZG/...')",
+    },
+    toc: {
+      toolName: "get_wmadapters_toc",
+      description:
+        "Get the table of contents for IBM webMethods Adapters documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Configuring', 'Using')",
+    },
+  },
+
+  wmdeployer: {
+    id: "wmdeployer",
+    serverName: "wmdeployer-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Deployer 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Deployer 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-deployer/12.1.0
+    components: [
+      { key: "SST24G_12.1.0", label: "IBM webMethods Deployer" },
+    ],
+    search: {
+      toolName: "search_wmdeployer_docs",
+      description:
+        "Search IBM webMethods Deployer 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'deployment', 'project', 'candidate', 'repository', 'automation')",
+    },
+    read: {
+      toolName: "read_wmdeployer_doc",
+      description:
+        "Read a specific IBM webMethods Deployer 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SST24G_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmdeployer_toc",
+      description:
+        "Get the table of contents for IBM webMethods Deployer 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Deploying', 'Administering')",
+    },
+  },
+
+  wmcommandcentral: {
+    id: "wmcommandcentral",
+    serverName: "wmcommandcentral-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Command Central 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Command Central 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-command-central/12.1.0
+    components: [
+      { key: "SSAQYBR_12.1.0", label: "IBM webMethods Command Central" },
+    ],
+    search: {
+      toolName: "search_wmcommandcentral_docs",
+      description:
+        "Search IBM webMethods Command Central 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'command central', 'platform manager', 'template', 'provisioning', 'lifecycle')",
+    },
+    read: {
+      toolName: "read_wmcommandcentral_doc",
+      description:
+        "Read a specific IBM webMethods Command Central 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSAQYBR_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmcommandcentral_toc",
+      description:
+        "Get the table of contents for IBM webMethods Command Central 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Provisioning')",
+    },
+  },
+
+  bigmemorymax: {
+    id: "bigmemorymax",
+    serverName: "bigmemorymax-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM BigMemory Max 4.5.1 Docs MCP server running on stdio",
+    tocHeading: "IBM BigMemory Max 4.5.1",
+    // https://www.ibm.com/docs/en/bigmemory-max/4.5.1
+    components: [
+      { key: "SSMGFCH_4.5.1", label: "IBM BigMemory Max" },
+    ],
+    search: {
+      toolName: "search_bigmemorymax_docs",
+      description:
+        "Search IBM BigMemory Max 4.5.1 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'in-memory', 'cache', 'Ehcache', 'distributed', 'BigMemory')",
+    },
+    read: {
+      toolName: "read_bigmemorymax_doc",
+      description:
+        "Read a specific IBM BigMemory Max 4.5.1 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSMGFCH_4.5.1/...')",
+    },
+    toc: {
+      toolName: "get_bigmemorymax_toc",
+      description:
+        "Get the table of contents for IBM BigMemory Max 4.5.1 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Configuring')",
+    },
+  },
+
+  terracotta: {
+    id: "terracotta",
+    serverName: "terracotta-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Terracotta 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM Terracotta 12.1.0",
+    // https://www.ibm.com/docs/en/terracotta/12.1.0
+    components: [
+      { key: "SSJ67XW_12.1.0", label: "IBM Terracotta" },
+    ],
+    search: {
+      toolName: "search_terracotta_docs",
+      description:
+        "Search IBM Terracotta 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'clustering', 'distributed cache', 'server', 'Ehcache', 'session')",
+    },
+    read: {
+      toolName: "read_terracotta_doc",
+      description:
+        "Read a specific IBM Terracotta 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSJ67XW_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_terracotta_toc",
+      description:
+        "Get the table of contents for IBM Terracotta 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Configuring')",
+    },
+  },
+
+  wmb2btrading: {
+    id: "wmb2btrading",
+    serverName: "wmb2btrading-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods B2B Trading Networks 12.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods B2B Trading Networks 12.1.0",
+    // https://www.ibm.com/docs/en/webmethods-b2b-trading-networks/12.1.0
+    components: [
+      { key: "SSYDXW_12.1.0", label: "IBM webMethods B2B Trading Networks" },
+    ],
+    search: {
+      toolName: "search_wmb2btrading_docs",
+      description:
+        "Search IBM webMethods B2B Trading Networks 12.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'trading partner', 'EDI', 'B2B', 'document exchange', 'routing')",
+    },
+    read: {
+      toolName: "read_wmb2btrading_doc",
+      description:
+        "Read a specific IBM webMethods B2B Trading Networks 12.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSYDXW_12.1.0/...')",
+    },
+    toc: {
+      toolName: "get_wmb2btrading_toc",
+      description:
+        "Get the table of contents for IBM webMethods B2B Trading Networks 12.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Administering', 'Developing', 'Using')",
+    },
+  },
+
+  wmestandards: {
+    id: "wmestandards",
+    serverName: "wmestandards-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods eStandards Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods eStandards",
+    // https://www.ibm.com/docs/en/webmethods-estandards
+    components: [
+      { key: "SSQX2X8", label: "IBM webMethods eStandards" },
+    ],
+    search: {
+      toolName: "search_wmestandards_docs",
+      description:
+        "Search IBM webMethods eStandards documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'EDI', 'EDIFACT', 'X12', 'HL7', 'RosettaNet', 'schema')",
+    },
+    read: {
+      toolName: "read_wmestandards_doc",
+      description:
+        "Read a specific IBM webMethods eStandards documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSQX2X8/...')",
+    },
+    toc: {
+      toolName: "get_wmestandards_toc",
+      description:
+        "Get the table of contents for IBM webMethods eStandards documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Configuring', 'Using')",
+    },
+  },
+
+  wmpkgregistry: {
+    id: "wmpkgregistry",
+    serverName: "wmpkgregistry-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods Package Registry (SaaS) Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods Package Registry (SaaS)",
+    // https://www.ibm.com/docs/en/webmethods-package-registry
+    components: [
+      { key: "SSYVSL1", label: "IBM webMethods Package Registry" },
+    ],
+    search: {
+      toolName: "search_wmpkgregistry_docs",
+      description:
+        "Search IBM webMethods Package Registry (SaaS) documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'package', 'registry', 'publish', 'artifact', 'SaaS')",
+    },
+    read: {
+      toolName: "read_wmpkgregistry_doc",
+      description:
+        "Read a specific IBM webMethods Package Registry (SaaS) documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSYVSL1/...')",
+    },
+    toc: {
+      toolName: "get_wmpkgregistry_toc",
+      description:
+        "Get the table of contents for IBM webMethods Package Registry (SaaS) documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Getting Started', 'Administering', 'Using')",
+    },
+  },
+
+  wme2emonitoring: {
+    id: "wme2emonitoring",
+    serverName: "wme2emonitoring-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM webMethods End-to-End Monitoring (SaaS) Docs MCP server running on stdio",
+    tocHeading: "IBM webMethods End-to-End Monitoring (SaaS)",
+    // https://www.ibm.com/docs/en/webmethods-end-to-end-monitoring
+    components: [
+      { key: "SSMIVP", label: "IBM webMethods End-to-End Monitoring" },
+    ],
+    search: {
+      toolName: "search_wme2emonitoring_docs",
+      description:
+        "Search IBM webMethods End-to-End Monitoring (SaaS) documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'monitoring', 'dashboard', 'transaction', 'alert', 'SaaS')",
+    },
+    read: {
+      toolName: "read_wme2emonitoring_doc",
+      description:
+        "Read a specific IBM webMethods End-to-End Monitoring (SaaS) documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSMIVP/...')",
+    },
+    toc: {
+      toolName: "get_wme2emonitoring_toc",
+      description:
+        "Get the table of contents for IBM webMethods End-to-End Monitoring (SaaS) documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Getting Started', 'Administering', 'Using')",
+    },
+  },
 } satisfies Record<string, ProductDefinition>;
 
 export type ProductId = keyof typeof PRODUCTS;

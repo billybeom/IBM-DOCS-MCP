@@ -23,6 +23,18 @@
     "wmcloudstreams-docs-mcp",
     "wmum-docs-mcp",
     "wmbroker-docs-mcp",
+    "wmmywebmethods-docs-mcp",
+    "wmmonitor-docs-mcp",
+    "wmupdatemgr-docs-mcp",
+    "wmadapters-docs-mcp",
+    "wmdeployer-docs-mcp",
+    "wmcommandcentral-docs-mcp",
+    "bigmemorymax-docs-mcp",
+    "terracotta-docs-mcp",
+    "wmb2btrading-docs-mcp",
+    "wmestandards-docs-mcp",
+    "wmpkgregistry-docs-mcp",
+    "wme2emonitoring-docs-mcp",
     "unified"
   ],
   "scripts": {

@@ -41,23 +41,23 @@
   },
   {
     "product": "apic",
-    "query": "Conditional error processing",
-    "href": "SSMNED_12.1.x_cd/com.ibm.apic.apistudio.doc/co-conditional_error_processing.html"
+    "query": "Response transformation",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.apistudio.doc/co_policy_response_processing.html"
   },
   {
     "product": "apic",
-    "query": "Describing your policy",
-    "href": "SSMNED_12.1.x_cd/com.ibm.apic.policy.doc/tapim_creating_policy.html"
+    "query": "Running Config Sync as a cronjob on Kubernetes",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.apionprem.doc/apic_config_sync_cronjob_k8s.html"
   },
   {
     "product": "apic",
-    "query": "Running out of storage space",
-    "href": "SSMNED_12.1.x_cd/com.ibm.apic.analytics.doc/running_out_of_storage_space.html"
+    "query": "No analytics data in UIs",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.analytics.doc/no_analytics_data_in_uis.html"
   },
   {
     "product": "apic",
-    "query": "Publishing APIs to Developer Portal",
-    "href": "SSMNED_12.1.x_cd/com.ibm.apic.wmapigateway.doc/apigateway_ug/ta-api_publish_single.html"
+    "query": "Publishing APIs to service registries",
+    "href": "SSMNED_12.1.x_cd/com.ibm.apic.wmapigateway.doc/apigateway_ug/ta-api_publish_single_to_service_registries.html"
   },
   {
     "product": "concert",
@@ -66,8 +66,8 @@
   },
   {
     "product": "concert",
-    "query": "Setting up external repositories for Concert Data Apps (Kubernetes)",
-    "href": "SSQNYH_2.3.x/doc/byor_concert_data_apps_ocp.html"
+    "query": "Setting up external repositories for Concert (Kubernetes)",
+    "href": "SSQNYH_2.3.x/doc/byos_settingup_credentials.html"
   },
   {
     "product": "concert",
@@ -96,28 +96,28 @@
   },
   {
     "product": "dpgw1100",
-    "query": "Enabling the Interoperability Test Service",
-    "href": "SS9H2Y_11.0.0/documentprocessing/wtx_enablingtheinteroperabilitytestservice.html"
+    "query": "Defining a single input and output",
+    "href": "SS9H2Y_11.0.0/documentprocessing/wtx_definingsingleinputoutput.html"
   },
   {
     "product": "dpgw1100",
-    "query": "wsdl-attachment-part (API schema)",
-    "href": "SS9H2Y_11.0.0/commands/wsdl-attachment-part_apischema.html"
+    "query": "response-match (application security policy)",
+    "href": "SS9H2Y_11.0.0/commands/response-match_applicationsecuritypolicy.html"
   },
   {
     "product": "dpgw1100",
-    "query": "password (deprecated - IMS Callout handler)",
-    "href": "SS9H2Y_11.0.0/commands/password_imscallout.html"
+    "query": "acl (IMS Connect handler)",
+    "href": "SS9H2Y_11.0.0/commands/acl_imsconnecthandler.html"
   },
   {
     "product": "dpgw1100",
-    "query": "quota-enforcement-switch-primary (quota enforcement server)",
-    "href": "SS9H2Y_11.0.0/commands/quota-enforcement-switch-primary_quotaenforcementserver.html"
+    "query": "hard-limit (rate limit definition)",
+    "href": "SS9H2Y_11.0.0/commands/hard-limit_ratelimitdefinition.html"
   },
   {
     "product": "dpgw1100",
-    "query": "monitor-count (XML firewall)",
-    "href": "SS9H2Y_11.0.0/commands/monitor-count_xmlfirewall.html"
+    "query": "max-prefixes (XML firewall)",
+    "href": "SS9H2Y_11.0.0/commands/max-prefixes_xmlfirewall.html"
   },
   {
     "product": "graphql",
@@ -161,23 +161,23 @@
   },
   {
     "product": "idig",
-    "query": "Invoke OpenAI Models ID",
-    "href": "SSP8GWM_12.1.1/com.ibm.apic.aigateway.doc/idig_studio/idig_nano_gw_invoke_open_ai_models_id.html"
+    "query": "Invoke OpenAI Embeddings",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.aigateway.doc/idig_studio/idig_nano_gw_invoke_open_ai_embeddings.html"
   },
   {
     "product": "idig",
-    "query": "Securing communication between Developer Portal nodes in a cluster",
-    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/administration/ta-secure_dpo_ignite.html"
+    "query": "Securing Developer Portal and OpenSearch communication",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/administration/ta-secure_dpo_opensearch.html"
   },
   {
     "product": "idig",
-    "query": "Adding user groups",
-    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/manage_users/ta-add_group.html"
+    "query": "User onboarding",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/manage_users/idig_co-manage_users.html"
   },
   {
     "product": "idig",
-    "query": "Property types",
-    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/custom_asset/re-property_types.html"
+    "query": "Creating applications from API details page",
+    "href": "SSP8GWM_12.1.1/com.ibm.apic.wmDevPortal.doc/manage_applications/ta-create_applications_apidetails.html"
   },
   {
     "product": "instana",
@@ -186,18 +186,18 @@
   },
   {
     "product": "instana",
-    "query": "Apache Solr sensor releases",
-    "href": "SSO4JPD/src/pages/ecosystem/apache-solr/apache_solr_rn.html"
+    "query": "Apache Spark sensor releases",
+    "href": "SSO4JPD/src/pages/ecosystem/apache-spark/apache_spark_rn.html"
   },
   {
     "product": "instana",
-    "query": "Monitoring a Windows host",
-    "href": "SSO4JPD/src/pages/ecosystem/host/windows_host.html"
+    "query": "Host sensor releases",
+    "href": "SSO4JPD/src/pages/ecosystem/host/host_rn.html"
   },
   {
     "product": "instana",
-    "query": "OS Process sensor releases",
-    "href": "SSO4JPD/src/pages/ecosystem/os-process/os_process_rn.html"
+    "query": "Oracle Tuxedo sensor releases",
+    "href": "SSO4JPD/src/pages/ecosystem/tuxedo/tuxedo_rn.html"
   },
   {
     "product": "instana",
@@ -206,8 +206,8 @@
   },
   {
     "product": "instana",
-    "query": "Making your Instana dashboards publicly shareable",
-    "href": "SSO4JPD/src/pages/ecosystem/integration-package-management/dashboards-publicly-shareable.html"
+    "query": "Sharing and reusing Instana event definitions",
+    "href": "SSO4JPD/src/pages/ecosystem/integration-package-management/sharing-event-definitions.html"
   },
   {
     "product": "iwhi",
@@ -216,27 +216,267 @@
   },
   {
     "product": "iwhi",
-    "query": "Repository connection pools",
-    "href": "SSGOVO/re-sap_erp_monitoring_sap__erp_connection_pool_repository_connection_pools.html"
+    "query": "JDBC data type to Java data type mapping constraints",
+    "href": "SSGOVO/re-database_acc_config_advanced_options_configuring_the_parameter_values_jdbc_data_type_to_jdbc_data_type_to.html"
   },
   {
     "product": "iwhi",
-    "query": "Adding workflow alert rules",
-    "href": "SSGOVO/ta-monitor_alert_rules_workflow_alerts_adding_workflow_alert_rules.html"
+    "query": "Downloading flow service execution logs",
+    "href": "SSGOVO/ta-execution_results_workflow_execution_flow_service_execution_fetching_flow_service_execution_data_based_on_exec_viewing_flow_service_execution_logs_downloading_flow_service_execution_logs.html"
   },
   {
     "product": "iwhi",
-    "query": "Replaying recorded messages (record and replay)",
-    "href": "SSJ8I7/ace_ipaas/aas_record_replay.html"
+    "query": "Updating the version of your integration runtime",
+    "href": "SSJ8I7/ace_ipaas/aas_updating_operands.html"
   },
   {
     "product": "iwhi",
-    "query": "List operations",
-    "href": "SSFQ7G1_12.1.0/com.ibm.apic.assistant.doc/list_assistant.html"
+    "query": "MTLS for connectivity pack applications",
+    "href": "SSFQ7G1_12.1.0/com.ibm.apic.assistant.doc/mtls_connectivity.html"
   },
   {
     "product": "iwhi",
-    "query": "Modifying the provider configuration",
-    "href": "SSFQ7G1_12.1.0/com.ibm.apic.wmapigatewaysaas.doc/ag_sc_modifying_provider_configuration.html"
+    "query": "Scenarios where you cannot use teams support",
+    "href": "SSFQ7G1_12.1.0/com.ibm.apic.wmapigatewaysaas.doc/ag_user_management_scenarios_where_you_cannot_use_teams_support.html"
+  },
+  {
+    "product": "wminfra",
+    "query": "IBM webMethods Infrastructure 12.1 Readme",
+    "href": "SSDZDB_12.1.0/co-landing_page.html"
+  },
+  {
+    "product": "wminfra",
+    "query": "The Java Service Wrapper",
+    "href": "SSDZDB_12.1.0/co-about_the_java_service_wrapper.html"
+  },
+  {
+    "product": "wminfra",
+    "query": "Creating the JAAS Configuration File",
+    "href": "SSDZDB_12.1.0/co-creating_the_jaas_configuration_file.html"
+  },
+  {
+    "product": "wminfra",
+    "query": "WebmethodsAbstractLoginModule",
+    "href": "SSDZDB_12.1.0/co-sagabstractloginmodule.html"
+  },
+  {
+    "product": "wminfra",
+    "query": "Implementing Policy Validation Callbacks",
+    "href": "SSDZDB_12.1.0/co-implementing_policy_validation_callbacks.html"
+  },
+  {
+    "product": "wminfra",
+    "query": "Deploying Web Services Stack",
+    "href": "SSDZDB_12.1.0/co-deploy_web_services_stack.html"
+  },
+  {
+    "product": "wminstaller",
+    "query": "IBM webMethods Installer Readme",
+    "href": "SSE9VGQ_12.1.0/installer-readme/co-landing_page.html"
+  },
+  {
+    "product": "wminstaller",
+    "query": "Process Engine Database Components",
+    "href": "SSE9VGQ_12.1.0/installing_sag_products/co-process_engine_db_components.html"
+  },
+  {
+    "product": "wminstaller",
+    "query": "Configure Browsers and JRE Font",
+    "href": "SSE9VGQ_12.1.0/installing_sag_products/co-config_browsers_and_jre.html"
+  },
+  {
+    "product": "wminstaller",
+    "query": "Supported Upgrade Paths for IBM Products On Premises",
+    "href": "SSE9VGQ_12.1.0/upgrade_supported_paths/re-upgr_supported_paths.html"
+  },
+  {
+    "product": "wminstaller",
+    "query": "Migrate Using Imported Settings",
+    "href": "SSE9VGQ_12.1.0/upgrading_sag_products/um/ta-migrate_using_imported_settings.html"
+  },
+  {
+    "product": "wminstaller",
+    "query": "Migrate Task Application Projects",
+    "href": "SSE9VGQ_12.1.0/upgrading_sag_products/designer/ta-migrate_task_application_projects.html"
+  },
+  {
+    "product": "wmdesigner",
+    "query": "Critical Information",
+    "href": "SSFTR88_12.1.0/sdf_release_readme/critical-info.html"
+  },
+  {
+    "product": "wmdesigner",
+    "query": "Building C/C++ Services",
+    "href": "SSFTR88_12.1.0/service_development/to-c_services.html"
+  },
+  {
+    "product": "wmdesigner",
+    "query": "Deleting IBM webMethods Messaging Triggers",
+    "href": "SSFTR88_12.1.0/service_development/s_wm_msg_triggers/msg_triggers_deleting.html"
+  },
+  {
+    "product": "wmdesigner",
+    "query": "Viewing Document Types for a Header or Fault Element",
+    "href": "SSFTR88_12.1.0/service_development/s_ws/ws_view_doctype_for_header.html"
+  },
+  {
+    "product": "wmdesigner",
+    "query": "API Portal Preferences",
+    "href": "SSFTR88_12.1.0/service_development/to-preferences_api-portal.html"
+  },
+  {
+    "product": "wmdesigner",
+    "query": "Usage Notes on REST",
+    "href": "SSFTR88_12.1.0/service_development/to-appendix.html"
+  },
+  {
+    "product": "wmis",
+    "query": "Critical Information",
+    "href": "SSL8N8_12.1.0/pie_release_readme/critical-info.html"
+  },
+  {
+    "product": "wmis",
+    "query": "Event Trigger State and Status",
+    "href": "SSL8N8_12.1.0/is_administrators_guide/z_streaming_triggers_manage/co-event_trigger_state.html"
+  },
+  {
+    "product": "wmis",
+    "query": "pub.monitor.archive:getArchiveStatus",
+    "href": "SSL8N8_12.1.0/service_monitoring/re-archive_folder_pub.monitor.archivegetarchivestatus.html"
+  },
+  {
+    "product": "wmis",
+    "query": "Debugging Flow Services",
+    "href": "SSL8N8_12.1.0/service_development/to-debugging_flow_services.html"
+  },
+  {
+    "product": "wmis",
+    "query": "Defining Flat File Elements",
+    "href": "SSL8N8_12.1.0/service_development/z_flat_file_schema/flat_file_elements_define.html"
+  },
+  {
+    "product": "wmis",
+    "query": "Publishing Documents",
+    "href": "SSL8N8_12.1.0/pub_sub_dev_guide/to-publishing_documents.html"
+  },
+  {
+    "product": "wmmsr",
+    "query": "Critical Information",
+    "href": "SSIL0VK_12.1.0/msc_release_readme/critical-info.html"
+  },
+  {
+    "product": "wmmsr",
+    "query": "Fixes Included in Each Release",
+    "href": "SSIL0VK_12.1.0/msc_release_readme/fixes-included.html"
+  },
+  {
+    "product": "wmmsr",
+    "query": "Terminology Changes",
+    "href": "SSIL0VK_12.1.0/msc_release_readme/term-changes.html"
+  },
+  {
+    "product": "wmmsr",
+    "query": "Added, Removed, Deprecated, or Changed Built-In Services",
+    "href": "SSIL0VK_12.1.0/msc_release_readme/service-changes.html"
+  },
+  {
+    "product": "wmmsr",
+    "query": "Starting, Shutting Down, and Restarting Microservices Runtime",
+    "href": "SSIL0VK_12.1.0/microservices_container_guide/to-start_stop.html"
+  },
+  {
+    "product": "wmmsr",
+    "query": "Using Configuration Variables Templates with Microservices Runtime",
+    "href": "SSIL0VK_12.1.0/microservices_container_guide/to-configuration_variables_for_docker.html"
+  },
+  {
+    "product": "wmcloudstreams",
+    "query": "Critical Information",
+    "href": "SSMAZ29_12.1.0/dita/critical-info.html"
+  },
+  {
+    "product": "wmcloudstreams",
+    "query": "Adding Properties",
+    "href": "SSMAZ29_12.1.0/cloudstreams/ta-create_connauth_property.html"
+  },
+  {
+    "product": "wmcloudstreams",
+    "query": "Assigning Values from a Service",
+    "href": "SSMAZ29_12.1.0/cloudstreams/ta-assignscrn_rest_service.html"
+  },
+  {
+    "product": "wmcloudstreams",
+    "query": "Enabling Cloud Connections",
+    "href": "SSMAZ29_12.1.0/enabling_cloud_connections.html"
+  },
+  {
+    "product": "wmcloudstreams",
+    "query": "List all connection types",
+    "href": "SSMAZ29_12.1.0/list_all_connection_types.html"
+  },
+  {
+    "product": "wmcloudstreams",
+    "query": "Fetch all services for a connector",
+    "href": "SSMAZ29_12.1.0/fetch_all_services_for_a_connector.html"
+  },
+  {
+    "product": "wmum",
+    "query": "IBM webMethods Universal Messaging 12.1 Readme",
+    "href": "SSEUZ5Z_12.1.0/co-landing_page.html"
+  },
+  {
+    "product": "wmum",
+    "query": "Creating Clustered Resources",
+    "href": "SSEUZ5Z_12.1.0/co-clusteredresources.html"
+  },
+  {
+    "product": "wmum",
+    "query": "Publishing Events on a Queue",
+    "href": "SSEUZ5Z_12.1.0/ta-em_queue_publish.html"
+  },
+  {
+    "product": "wmum",
+    "query": "How Does Universal Messaging Run in a Windows Cluster?",
+    "href": "SSEUZ5Z_12.1.0/co-how_does_universal_messaging_run_in_a_windows_cluster.html"
+  },
+  {
+    "product": "wmum",
+    "query": "Creating a Channel",
+    "href": "SSEUZ5Z_12.1.0/co-createchannel_3.html"
+  },
+  {
+    "product": "wmum",
+    "query": "C++ Client: Asynchronous Queue Consumer",
+    "href": "SSEUZ5Z_12.1.0/re-cpp_asynchronous_queue_consumer.html"
+  },
+  {
+    "product": "wmbroker",
+    "query": "Critical Information",
+    "href": "SSHB271_12.1.0/dita/critical-info.html"
+  },
+  {
+    "product": "wmbroker",
+    "query": "Managing Brokers",
+    "href": "SSHB271_12.1.0/broker_admin_guide/to-admin_brokers.html"
+  },
+  {
+    "product": "wmbroker",
+    "query": "IBM webMethods Broker and the Command Line Interface",
+    "href": "SSHB271_12.1.0/broker_admin_guide/to-broker_cli.html"
+  },
+  {
+    "product": "wmbroker",
+    "query": "JMS Request-Reply Application with a Message Selector",
+    "href": "SSHB271_12.1.0/messaging_prog_guide/to-req_reply_with_msg_selector.html"
+  },
+  {
+    "product": "wmbroker",
+    "query": "Managing Broker Clusters",
+    "href": "SSHB271_12.1.0/broker_java_api_admin_prog_gd/to-managing_broker_clusters.html"
+  },
+  {
+    "product": "wmbroker",
+    "query": "Using Event Filters",
+    "href": "SSHB271_12.1.0/broker_java_api_client_prog_gd/to-filtering.html"
   }
 ]
