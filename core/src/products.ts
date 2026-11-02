@@ -1632,6 +1632,142 @@ export const PRODUCTS = {
         "Optional: filter to a specific section by label (e.g. 'Installing', 'Using', 'Configuring')",
     },
   },
+
+  ibmmq: {
+    id: "ibmmq",
+    serverName: "ibmmq-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM MQ 10.0.0 Docs MCP server running on stdio",
+    tocHeading: "IBM MQ 10.0.0",
+    // https://www.ibm.com/docs/en/ibm-mq/10.0.0
+    components: [
+      { key: "SSYHRD_10.0.0", label: "IBM MQ" },
+    ],
+    search: {
+      toolName: "search_ibmmq_docs",
+      description:
+        "Search IBM MQ 10.0.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'queue manager', 'channel', 'publish subscribe', 'JMS', 'MQ client')",
+    },
+    read: {
+      toolName: "read_ibmmq_doc",
+      description:
+        "Read a specific IBM MQ 10.0.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSYHRD_10.0.0/...')",
+    },
+    toc: {
+      toolName: "get_ibmmq_toc",
+      description:
+        "Get the table of contents for IBM MQ 10.0.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Developing')",
+    },
+  },
+
+  ibmmqappliance: {
+    id: "ibmmqappliance",
+    serverName: "ibmmqappliance-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM MQ Appliance 10.0.0 Docs MCP server running on stdio",
+    tocHeading: "IBM MQ Appliance 10.0.0",
+    // https://www.ibm.com/docs/en/mq-appliance/10.0.0
+    components: [
+      { key: "SS5K6E_10.0.0", label: "IBM MQ Appliance" },
+    ],
+    search: {
+      toolName: "search_ibmmqappliance_docs",
+      description:
+        "Search IBM MQ Appliance 10.0.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'appliance', 'hardware', 'queue manager', 'network', 'HA')",
+    },
+    read: {
+      toolName: "read_ibmmqappliance_doc",
+      description:
+        "Read a specific IBM MQ Appliance 10.0.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SS5K6E_10.0.0/...')",
+    },
+    toc: {
+      toolName: "get_ibmmqappliance_toc",
+      description:
+        "Get the table of contents for IBM MQ Appliance 10.0.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Configuring')",
+    },
+  },
+
+  ibmmqaas: {
+    id: "ibmmqaas",
+    serverName: "ibmmqaas-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM MQ as a Service Docs MCP server running on stdio",
+    tocHeading: "IBM MQ as a Service",
+    // https://www.ibm.com/docs/en/mq-as-a-service
+    components: [
+      { key: "SSCL78", label: "IBM MQ as a Service" },
+    ],
+    search: {
+      toolName: "search_ibmmqaas_docs",
+      description:
+        "Search IBM MQ as a Service documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'MQ SaaS', 'cloud queue manager', 'service instance', 'connectivity')",
+    },
+    read: {
+      toolName: "read_ibmmqaas_doc",
+      description:
+        "Read a specific IBM MQ as a Service documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSCL78/...')",
+    },
+    toc: {
+      toolName: "get_ibmmqaas_toc",
+      description:
+        "Get the table of contents for IBM MQ as a Service documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Getting Started', 'Administering', 'Connecting')",
+    },
+  },
+
+  ibmmqhpe: {
+    id: "ibmmqhpe",
+    serverName: "ibmmqhpe-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM MQ for HPE NonStop 8.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM MQ for HPE NonStop 8.1.0",
+    // https://www.ibm.com/docs/en/mq-for-hpe-nonstop/8.1.0
+    components: [
+      { key: "SSKM59_8.1.0", label: "IBM MQ for HPE NonStop" },
+    ],
+    search: {
+      toolName: "search_ibmmqhpe_docs",
+      description:
+        "Search IBM MQ for HPE NonStop 8.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'NonStop', 'HPE', 'queue manager', 'fault-tolerant', 'MQ client')",
+    },
+    read: {
+      toolName: "read_ibmmqhpe_doc",
+      description:
+        "Read a specific IBM MQ for HPE NonStop 8.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSKM59_8.1.0/...')",
+    },
+    toc: {
+      toolName: "get_ibmmqhpe_toc",
+      description:
+        "Get the table of contents for IBM MQ for HPE NonStop 8.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Developing')",
+    },
+  },
 } satisfies Record<string, ProductDefinition>;
 
 export type ProductId = keyof typeof PRODUCTS;

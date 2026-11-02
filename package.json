@@ -54,6 +54,10 @@
     "asperaproxy-docs-mcp",
     "asperashares-docs-mcp",
     "asperavalidator-docs-mcp",
+    "ibmmq-docs-mcp",
+    "ibmmqappliance-docs-mcp",
+    "ibmmqaas-docs-mcp",
+    "ibmmqhpe-docs-mcp",
     "unified"
   ],
   "scripts": {

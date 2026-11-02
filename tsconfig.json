@@ -146,6 +146,18 @@
       "path": "asperavalidator-docs-mcp"
     },
     {
+      "path": "ibmmq-docs-mcp"
+    },
+    {
+      "path": "ibmmqappliance-docs-mcp"
+    },
+    {
+      "path": "ibmmqaas-docs-mcp"
+    },
+    {
+      "path": "ibmmqhpe-docs-mcp"
+    },
+    {
       "path": "unified"
     }
   ]

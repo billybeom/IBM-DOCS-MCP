@@ -78,6 +78,10 @@ export const BLURBS: Record<string, string> = {
   asperaproxy: "IBM Aspera Proxy Gateway 2.3 — FASP 트래픽 프록시/릴레이 게이트웨이. 방화벽 우회",
   asperashares: "IBM Aspera Shares 1.11.0 — 폴더 공유 및 협업 파일 전송 서버. 권한 관리",
   asperavalidator: "IBM Aspera Validator 1.0 — 전송 무결성 검증. 체크섬, 파일 확인",
+  ibmmq: "IBM MQ 10.0.0 — 엔터프라이즈 메시지 큐잉. 큐 매니저, 채널, Pub/Sub, JMS, MQ 클라이언트",
+  ibmmqappliance: "IBM MQ Appliance 10.0.0 — 전용 MQ 하드웨어 어플라이언스. HA, DR, 네트워크 통합",
+  ibmmqaas: "IBM MQ as a Service — 클라우드 관리형 MQ 서비스(SaaS). 서비스 인스턴스, 연결 설정",
+  ibmmqhpe: "IBM MQ for HPE NonStop 8.1.0 — HPE NonStop 플랫폼용 내결함성 MQ. 고가용성 메시지 큐",
 };
 
 /**
