@@ -89,6 +89,63 @@
       "path": "wme2emonitoring-docs-mcp"
     },
     {
+      "path": "ace-docs-mcp"
+    },
+    {
+      "path": "iib-docs-mcp"
+    },
+    {
+      "path": "aspera-docs-mcp"
+    },
+    {
+      "path": "asperacargo-docs-mcp"
+    },
+    {
+      "path": "asperaconnect-docs-mcp"
+    },
+    {
+      "path": "asperaconsole-docs-mcp"
+    },
+    {
+      "path": "asperade-docs-mcp"
+    },
+    {
+      "path": "asperawebapps-docs-mcp"
+    },
+    {
+      "path": "asperafasp-docs-mcp"
+    },
+    {
+      "path": "asperafaspex-docs-mcp"
+    },
+    {
+      "path": "asperafaspio-docs-mcp"
+    },
+    {
+      "path": "asperahste-docs-mcp"
+    },
+    {
+      "path": "asperahsts-docs-mcp"
+    },
+    {
+      "path": "asperalite-docs-mcp"
+    },
+    {
+      "path": "asperaoc-docs-mcp"
+    },
+    {
+      "path": "asperaorch-docs-mcp"
+    },
+    {
+      "path": "asperaproxy-docs-mcp"
+    },
+    {
+      "path": "asperashares-docs-mcp"
+    },
+    {
+      "path": "asperavalidator-docs-mcp"
+    },
+    {
       "path": "unified"
     }
   ]

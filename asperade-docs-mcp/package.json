@@ -1,0 +1,14 @@
+{
+  "name": "asperade-docs-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Aspera Desktop Client 4.4 documentation",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@ibm-docs-mcp/core": "*"
+  }
+}

@@ -986,6 +986,652 @@ export const PRODUCTS = {
         "Optional: filter to a specific section by label (e.g. 'Getting Started', 'Administering', 'Using')",
     },
   },
+
+  ace: {
+    id: "ace",
+    serverName: "ace-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM App Connect Enterprise 13.0 Docs MCP server running on stdio",
+    tocHeading: "IBM App Connect Enterprise 13.0",
+    // https://www.ibm.com/docs/en/app-connect/13.0
+    components: [
+      { key: "SSTTDS_13.0", label: "IBM App Connect Enterprise" },
+    ],
+    search: {
+      toolName: "search_ace_docs",
+      description:
+        "Search IBM App Connect Enterprise 13.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'flow', 'message broker', 'toolkit', 'integration server', 'REST API')",
+    },
+    read: {
+      toolName: "read_ace_doc",
+      description:
+        "Read a specific IBM App Connect Enterprise 13.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSTTDS_13.0/...')",
+    },
+    toc: {
+      toolName: "get_ace_toc",
+      description:
+        "Get the table of contents for IBM App Connect Enterprise 13.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Developing', 'Administering')",
+    },
+  },
+
+  iib: {
+    id: "iib",
+    serverName: "iib-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Integration Bus 10.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM Integration Bus 10.1.0",
+    // https://www.ibm.com/docs/en/integration-bus/10.1.0
+    components: [
+      { key: "SSMKHH_10.1.0", label: "IBM Integration Bus" },
+    ],
+    search: {
+      toolName: "search_iib_docs",
+      description:
+        "Search IBM Integration Bus 10.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'message flow', 'broker', 'ESQL', 'toolkit', 'transport')",
+    },
+    read: {
+      toolName: "read_iib_doc",
+      description:
+        "Read a specific IBM Integration Bus 10.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSMKHH_10.1.0/...')",
+    },
+    toc: {
+      toolName: "get_iib_toc",
+      description:
+        "Get the table of contents for IBM Integration Bus 10.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Developing', 'Administering')",
+    },
+  },
+
+  aspera: {
+    id: "aspera",
+    serverName: "aspera-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera 1.1.x Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera 1.1.x",
+    // https://www.ibm.com/docs/en/aspera/1.1.x
+    components: [
+      { key: "SS8NDZ_1.1.x", label: "IBM Aspera" },
+    ],
+    search: {
+      toolName: "search_aspera_docs",
+      description:
+        "Search IBM Aspera 1.1.x documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'FASP', 'high-speed transfer', 'node API', 'transfer session')",
+    },
+    read: {
+      toolName: "read_aspera_doc",
+      description:
+        "Read a specific IBM Aspera 1.1.x documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SS8NDZ_1.1.x/...')",
+    },
+    toc: {
+      toolName: "get_aspera_toc",
+      description:
+        "Get the table of contents for IBM Aspera 1.1.x documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Getting Started', 'Administering', 'Developing')",
+    },
+  },
+
+  asperacargo: {
+    id: "asperacargo",
+    serverName: "asperacargo-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera Cargo 4.2 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera Cargo 4.2",
+    // https://www.ibm.com/docs/en/aspera-cargo/4.2
+    components: [
+      { key: "SSH2ME_4.2", label: "IBM Aspera Cargo" },
+    ],
+    search: {
+      toolName: "search_asperacargo_docs",
+      description:
+        "Search IBM Aspera Cargo 4.2 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'Cargo', 'file transfer', 'download', 'upload', 'FASP')",
+    },
+    read: {
+      toolName: "read_asperacargo_doc",
+      description:
+        "Read a specific IBM Aspera Cargo 4.2 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSH2ME_4.2/...')",
+    },
+    toc: {
+      toolName: "get_asperacargo_toc",
+      description:
+        "Get the table of contents for IBM Aspera Cargo 4.2 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Using', 'Configuring')",
+    },
+  },
+
+  asperaconnect: {
+    id: "asperaconnect",
+    serverName: "asperaconnect-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera Connect 4.2 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera Connect 4.2",
+    // https://www.ibm.com/docs/en/aspera-connect/4.2
+    components: [
+      { key: "SSXMX3_4.2", label: "IBM Aspera Connect" },
+    ],
+    search: {
+      toolName: "search_asperaconnect_docs",
+      description:
+        "Search IBM Aspera Connect 4.2 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'Connect browser plugin', 'transfer', 'install', 'SDK')",
+    },
+    read: {
+      toolName: "read_asperaconnect_doc",
+      description:
+        "Read a specific IBM Aspera Connect 4.2 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSXMX3_4.2/...')",
+    },
+    toc: {
+      toolName: "get_asperaconnect_toc",
+      description:
+        "Get the table of contents for IBM Aspera Connect 4.2 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Using', 'Developing')",
+    },
+  },
+
+  asperaconsole: {
+    id: "asperaconsole",
+    serverName: "asperaconsole-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera Console 3.4 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera Console 3.4",
+    // https://www.ibm.com/docs/en/aspera-console/3.4
+    components: [
+      { key: "SSGPXC_3.4", label: "IBM Aspera Console" },
+    ],
+    search: {
+      toolName: "search_asperaconsole_docs",
+      description:
+        "Search IBM Aspera Console 3.4 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'transfer monitoring', 'dashboard', 'node', 'report', 'alert')",
+    },
+    read: {
+      toolName: "read_asperaconsole_doc",
+      description:
+        "Read a specific IBM Aspera Console 3.4 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSGPXC_3.4/...')",
+    },
+    toc: {
+      toolName: "get_asperaconsole_toc",
+      description:
+        "Get the table of contents for IBM Aspera Console 3.4 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Using')",
+    },
+  },
+
+  asperade: {
+    id: "asperade",
+    serverName: "asperade-docs",
+    version: "1.0.0",
+    startupMessage:
+      "Aspera Desktop Client 4.4 Docs MCP server running on stdio",
+    tocHeading: "Aspera Desktop Client 4.4",
+    // https://www.ibm.com/docs/en/aspera-desktop-client/4.4
+    components: [
+      { key: "SSXN9J_4.4", label: "Aspera Desktop Client" },
+    ],
+    search: {
+      toolName: "search_asperade_docs",
+      description:
+        "Search Aspera Desktop Client 4.4 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'desktop client', 'transfer', 'preferences', 'connect', 'FASP')",
+    },
+    read: {
+      toolName: "read_asperade_doc",
+      description:
+        "Read a specific Aspera Desktop Client 4.4 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSXN9J_4.4/...')",
+    },
+    toc: {
+      toolName: "get_asperade_toc",
+      description:
+        "Get the table of contents for Aspera Desktop Client 4.4 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Using', 'Configuring')",
+    },
+  },
+
+  asperawebapps: {
+    id: "asperawebapps",
+    serverName: "asperawebapps-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera Enterprise WebApps Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera Enterprise WebApps",
+    // https://www.ibm.com/docs/en/aspera-enterprise-webapps
+    components: [
+      { key: "SSVUV2", label: "IBM Aspera Enterprise WebApps" },
+    ],
+    search: {
+      toolName: "search_asperawebapps_docs",
+      description:
+        "Search IBM Aspera Enterprise WebApps documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'web application', 'transfer', 'portal', 'upload', 'download')",
+    },
+    read: {
+      toolName: "read_asperawebapps_doc",
+      description:
+        "Read a specific IBM Aspera Enterprise WebApps documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSVUV2/...')",
+    },
+    toc: {
+      toolName: "get_asperawebapps_toc",
+      description:
+        "Get the table of contents for IBM Aspera Enterprise WebApps documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Using')",
+    },
+  },
+
+  asperafasp: {
+    id: "asperafasp",
+    serverName: "asperafasp-docs",
+    version: "1.0.0",
+    startupMessage:
+      "Aspera FASP Proxy 1.4 Docs MCP server running on stdio",
+    tocHeading: "Aspera FASP Proxy 1.4",
+    // https://www.ibm.com/docs/en/aspera-fasp-proxy/1.4
+    components: [
+      { key: "SSHGBJ_1.4", label: "Aspera FASP Proxy" },
+    ],
+    search: {
+      toolName: "search_asperafasp_docs",
+      description:
+        "Search Aspera FASP Proxy 1.4 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'FASP proxy', 'firewall', 'relay', 'UDP', 'configuration')",
+    },
+    read: {
+      toolName: "read_asperafasp_doc",
+      description:
+        "Read a specific Aspera FASP Proxy 1.4 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSHGBJ_1.4/...')",
+    },
+    toc: {
+      toolName: "get_asperafasp_toc",
+      description:
+        "Get the table of contents for Aspera FASP Proxy 1.4 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Configuring', 'Using')",
+    },
+  },
+
+  asperafaspex: {
+    id: "asperafaspex",
+    serverName: "asperafaspex-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera Faspex 5.0 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera Faspex 5.0",
+    // https://www.ibm.com/docs/en/aspera-faspex/5.0
+    components: [
+      { key: "SSGPEF_5.0", label: "IBM Aspera Faspex" },
+    ],
+    search: {
+      toolName: "search_asperafaspex_docs",
+      description:
+        "Search IBM Aspera Faspex 5.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'Faspex', 'file exchange', 'package', 'inbox', 'workgroup')",
+    },
+    read: {
+      toolName: "read_asperafaspex_doc",
+      description:
+        "Read a specific IBM Aspera Faspex 5.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSGPEF_5.0/...')",
+    },
+    toc: {
+      toolName: "get_asperafaspex_toc",
+      description:
+        "Get the table of contents for IBM Aspera Faspex 5.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Using')",
+    },
+  },
+
+  asperafaspio: {
+    id: "asperafaspio",
+    serverName: "asperafaspio-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera faspio 1.3 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera faspio 1.3",
+    // https://www.ibm.com/docs/en/aspera-faspio/1.3
+    components: [
+      { key: "SSHUA9_1.3", label: "IBM Aspera faspio" },
+    ],
+    search: {
+      toolName: "search_asperafaspio_docs",
+      description:
+        "Search IBM Aspera faspio 1.3 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'faspio', 'gateway', 'TCP', 'FASP', 'tunnel')",
+    },
+    read: {
+      toolName: "read_asperafaspio_doc",
+      description:
+        "Read a specific IBM Aspera faspio 1.3 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSHUA9_1.3/...')",
+    },
+    toc: {
+      toolName: "get_asperafaspio_toc",
+      description:
+        "Get the table of contents for IBM Aspera faspio 1.3 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Configuring', 'Using')",
+    },
+  },
+
+  asperahste: {
+    id: "asperahste",
+    serverName: "asperahste-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera High-Speed Transfer Endpoint 4.4 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera High-Speed Transfer Endpoint (HSTE) 4.4",
+    // https://www.ibm.com/docs/en/ahste/4.4
+    components: [
+      { key: "SSL7UM_4.4", label: "IBM Aspera High-Speed Transfer Endpoint" },
+    ],
+    search: {
+      toolName: "search_asperahste_docs",
+      description:
+        "Search IBM Aspera High-Speed Transfer Endpoint (HSTE) 4.4 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'HSTE', 'endpoint', 'transfer', 'FASP', 'configuration')",
+    },
+    read: {
+      toolName: "read_asperahste_doc",
+      description:
+        "Read a specific IBM Aspera High-Speed Transfer Endpoint (HSTE) 4.4 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSL7UM_4.4/...')",
+    },
+    toc: {
+      toolName: "get_asperahste_toc",
+      description:
+        "Get the table of contents for IBM Aspera High-Speed Transfer Endpoint (HSTE) 4.4 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Configuring')",
+    },
+  },
+
+  asperahsts: {
+    id: "asperahsts",
+    serverName: "asperahsts-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera High-Speed Transfer Server 4.4 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera High-Speed Transfer Server (HSTS) 4.4",
+    // https://www.ibm.com/docs/en/ahsts/4.4
+    components: [
+      { key: "SSL85S_4.4", label: "IBM Aspera High-Speed Transfer Server" },
+    ],
+    search: {
+      toolName: "search_asperahsts_docs",
+      description:
+        "Search IBM Aspera High-Speed Transfer Server (HSTS) 4.4 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'HSTS', 'transfer server', 'node API', 'FASP', 'configuration')",
+    },
+    read: {
+      toolName: "read_asperahsts_doc",
+      description:
+        "Read a specific IBM Aspera High-Speed Transfer Server (HSTS) 4.4 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSL85S_4.4/...')",
+    },
+    toc: {
+      toolName: "get_asperahsts_toc",
+      description:
+        "Get the table of contents for IBM Aspera High-Speed Transfer Server (HSTS) 4.4 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Configuring')",
+    },
+  },
+
+  asperalite: {
+    id: "asperalite",
+    serverName: "asperalite-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera Lite Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera Lite",
+    // https://www.ibm.com/docs/en/aspera-lite
+    components: [
+      { key: "SSCGOV", label: "IBM Aspera Lite" },
+    ],
+    search: {
+      toolName: "search_asperalite_docs",
+      description:
+        "Search IBM Aspera Lite documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'Aspera Lite', 'lightweight transfer', 'FASP', 'endpoint')",
+    },
+    read: {
+      toolName: "read_asperalite_doc",
+      description:
+        "Read a specific IBM Aspera Lite documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSCGOV/...')",
+    },
+    toc: {
+      toolName: "get_asperalite_toc",
+      description:
+        "Get the table of contents for IBM Aspera Lite documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Using', 'Configuring')",
+    },
+  },
+
+  asperaoc: {
+    id: "asperaoc",
+    serverName: "asperaoc-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera On Cloud Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera On Cloud",
+    // https://www.ibm.com/docs/en/aspera-on-cloud
+    components: [
+      { key: "SS5W4X", label: "IBM Aspera On Cloud" },
+    ],
+    search: {
+      toolName: "search_asperaoc_docs",
+      description:
+        "Search IBM Aspera On Cloud documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'AoC', 'SaaS transfer', 'workspace', 'package', 'files')",
+    },
+    read: {
+      toolName: "read_asperaoc_doc",
+      description:
+        "Read a specific IBM Aspera On Cloud documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SS5W4X/...')",
+    },
+    toc: {
+      toolName: "get_asperaoc_toc",
+      description:
+        "Get the table of contents for IBM Aspera On Cloud documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Getting Started', 'Administering', 'Using')",
+    },
+  },
+
+  asperaorch: {
+    id: "asperaorch",
+    serverName: "asperaorch-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera Orchestrator 4.1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera Orchestrator 4.1.0",
+    // https://www.ibm.com/docs/en/aspera-orchestrator/4.1.0
+    components: [
+      { key: "SSGUU7_4.1.0", label: "IBM Aspera Orchestrator" },
+    ],
+    search: {
+      toolName: "search_asperaorch_docs",
+      description:
+        "Search IBM Aspera Orchestrator 4.1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'workflow', 'orchestration', 'automation', 'plugin', 'transfer')",
+    },
+    read: {
+      toolName: "read_asperaorch_doc",
+      description:
+        "Read a specific IBM Aspera Orchestrator 4.1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSGUU7_4.1.0/...')",
+    },
+    toc: {
+      toolName: "get_asperaorch_toc",
+      description:
+        "Get the table of contents for IBM Aspera Orchestrator 4.1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Developing')",
+    },
+  },
+
+  asperaproxy: {
+    id: "asperaproxy",
+    serverName: "asperaproxy-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera Proxy Gateway 2.3 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera Proxy Gateway 2.3",
+    // https://www.ibm.com/docs/en/aspera-proxy-gateway/2.3
+    components: [
+      { key: "SSPMRW_2.3", label: "IBM Aspera Proxy Gateway" },
+    ],
+    search: {
+      toolName: "search_asperaproxy_docs",
+      description:
+        "Search IBM Aspera Proxy Gateway 2.3 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'proxy', 'gateway', 'firewall', 'FASP relay', 'configuration')",
+    },
+    read: {
+      toolName: "read_asperaproxy_doc",
+      description:
+        "Read a specific IBM Aspera Proxy Gateway 2.3 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSPMRW_2.3/...')",
+    },
+    toc: {
+      toolName: "get_asperaproxy_toc",
+      description:
+        "Get the table of contents for IBM Aspera Proxy Gateway 2.3 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Configuring', 'Using')",
+    },
+  },
+
+  asperashares: {
+    id: "asperashares",
+    serverName: "asperashares-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera Shares 1.11.0 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera Shares 1.11.0",
+    // https://www.ibm.com/docs/en/aspera-shares/1.11.0
+    components: [
+      { key: "SSGSS4_1.11.0", label: "IBM Aspera Shares" },
+    ],
+    search: {
+      toolName: "search_asperashares_docs",
+      description:
+        "Search IBM Aspera Shares 1.11.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'shares', 'collaboration', 'folder', 'permission', 'transfer')",
+    },
+    read: {
+      toolName: "read_asperashares_doc",
+      description:
+        "Read a specific IBM Aspera Shares 1.11.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSGSS4_1.11.0/...')",
+    },
+    toc: {
+      toolName: "get_asperashares_toc",
+      description:
+        "Get the table of contents for IBM Aspera Shares 1.11.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Administering', 'Using')",
+    },
+  },
+
+  asperavalidator: {
+    id: "asperavalidator",
+    serverName: "asperavalidator-docs",
+    version: "1.0.0",
+    startupMessage:
+      "IBM Aspera Validator 1.0 Docs MCP server running on stdio",
+    tocHeading: "IBM Aspera Validator 1.0",
+    // https://www.ibm.com/docs/en/aspera-validator/1.0
+    components: [
+      { key: "SSPMLA_1.0", label: "IBM Aspera Validator" },
+    ],
+    search: {
+      toolName: "search_asperavalidator_docs",
+      description:
+        "Search IBM Aspera Validator 1.0 documentation. Returns matching topics with titles, snippets, and URLs.",
+      queryHint:
+        "Search query (e.g. 'validator', 'integrity', 'checksum', 'verification', 'transfer')",
+    },
+    read: {
+      toolName: "read_asperavalidator_doc",
+      description:
+        "Read a specific IBM Aspera Validator 1.0 documentation page and return its content as Markdown. Use the 'href' from search results or TOC.",
+      hrefHint:
+        "Document href path (e.g. 'SSPMLA_1.0/...')",
+    },
+    toc: {
+      toolName: "get_asperavalidator_toc",
+      description:
+        "Get the table of contents for IBM Aspera Validator 1.0 documentation. Shows the full document structure with sections and topics.",
+      sectionHint:
+        "Optional: filter to a specific section by label (e.g. 'Installing', 'Using', 'Configuring')",
+    },
+  },
 } satisfies Record<string, ProductDefinition>;
 
 export type ProductId = keyof typeof PRODUCTS;

@@ -59,6 +59,25 @@ export const BLURBS: Record<string, string> = {
     "IBM webMethods Package Registry (SaaS) — 통합 패키지 레지스트리. 아티팩트 게시 및 관리",
   wme2emonitoring:
     "IBM webMethods End-to-End Monitoring (SaaS) — 통합 E2E 모니터링. 트랜잭션 추적, 대시보드, 알림(SaaS)",
+  ace: "IBM App Connect Enterprise 13.0 — 메시지 플로우 기반 통합 런타임. Toolkit, Integration Server, REST/SOAP API",
+  iib: "IBM Integration Bus 10.1.0 — 엔터프라이즈 메시지 브로커. 메시지 플로우, ESQL, 다양한 전송 프로토콜 지원",
+  aspera: "IBM Aspera 1.1.x — FASP 기반 고속 파일 전송 플랫폼 개요 및 공통 가이드",
+  asperacargo: "IBM Aspera Cargo 4.2 — Aspera 고속 전송 임베디드 클라이언트 라이브러리",
+  asperaconnect: "IBM Aspera Connect 4.2 — 브라우저 플러그인 및 SDK 기반 웹 통합 전송 클라이언트",
+  asperaconsole: "IBM Aspera Console 3.4 — 전송 모니터링 및 관리 대시보드. 노드/보고서/알림",
+  asperade: "Aspera Desktop Client 4.4 — 데스크톱 GUI 기반 FASP 파일 전송 클라이언트",
+  asperawebapps: "IBM Aspera Enterprise WebApps — 엔터프라이즈 웹 전송 포털. 업로드/다운로드",
+  asperafasp: "Aspera FASP Proxy 1.4 — 방화벽 통과용 FASP UDP 릴레이 프록시",
+  asperafaspex: "IBM Aspera Faspex 5.0 — 파일 교환 패키지 서버. 받은 편지함, 워크그룹, 패키지 배달",
+  asperafaspio: "IBM Aspera faspio 1.3 — TCP-to-FASP 터널 게이트웨이. 기존 TCP 애플리케이션의 고속 전송 지원",
+  asperahste: "IBM Aspera High-Speed Transfer Endpoint (HSTE) 4.4 — 경량 FASP 전송 엔드포인트",
+  asperahsts: "IBM Aspera High-Speed Transfer Server (HSTS) 4.4 — 서버측 FASP 전송 서버. Node API, 고가용성",
+  asperalite: "IBM Aspera Lite — 경량 Aspera 임베디드 전송 에이전트",
+  asperaoc: "IBM Aspera On Cloud — SaaS 기반 고속 파일 전송 플랫폼. 워크스페이스, 패키지, 파일 관리",
+  asperaorch: "IBM Aspera Orchestrator 4.1.0 — 워크플로우 자동화 및 전송 오케스트레이션. 플러그인, 스케줄",
+  asperaproxy: "IBM Aspera Proxy Gateway 2.3 — FASP 트래픽 프록시/릴레이 게이트웨이. 방화벽 우회",
+  asperashares: "IBM Aspera Shares 1.11.0 — 폴더 공유 및 협업 파일 전송 서버. 권한 관리",
+  asperavalidator: "IBM Aspera Validator 1.0 — 전송 무결성 검증. 체크섬, 파일 확인",
 };
 
 /**

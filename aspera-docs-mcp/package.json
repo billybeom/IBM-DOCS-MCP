@@ -1,0 +1,14 @@
+{
+  "name": "aspera-docs-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for IBM Aspera 1.1.x documentation",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@ibm-docs-mcp/core": "*"
+  }
+}
